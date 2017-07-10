@@ -1,0 +1,47 @@
+.blog-single {
+    margin: 2em 0;
+}
+
+.blog-single h2 {
+    color: #3C3B3B;
+    margin: 0.5em 0;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+}
+
+.blog-sec-info p {
+    color: #999;
+    line-height: 1.8em;
+    margin: 0.5em 0 2em 0;
+    font-size: 1.1em;
+}
+
+.blog-sec-info h3 {
+    margin-bottom: 0.5em;
+    font-family: 'Raleway', sans-serif;
+}
+
+.blog-sec-head {
+    padding: 0.5em 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 1em;
+}
+
+.blog-sec-head a {
+    color: #08080B;
+    font-weight: 700;
+    font-size: 0.875em;
+    padding-bottom: 0.2em;
+    display: inline-block;
+    text-transform: uppercase;
+}
+.container {
+    width: 1170px;
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}

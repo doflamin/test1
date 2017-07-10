@@ -1,0 +1,68 @@
+每一个标签都可以当dom对象 （document object model）文档对象模型
+单击事件：onclick
+
+
+事件三要素：
+
+事件源 var target = e.target || window.event.srcElement;
+事件处理方法
+事件对象
+
+
+
+选择器：
+oMenu//对象= document.getElementById("menu")//例子
+document.getElementsByClassName("")//兼容性问题
+document.getElementsByTagName("")标签选择器 没有兼容性问题的多项选择器
+ document.事件=函数（）｛｝
+对象.属性.属性
+
+undefined -> undefined
+null -> object
+obj.style.属性   可以赋值，取值只能取到内联样式
+
+
+
+
+
+有兼容性问题
+obj.addEventlistener(type不需要写on,function(){
+
+},false/true)
+
+false:事件是冒泡的
+true:事件捕获（从外往里）
+
+冒泡和捕获是相反的
+
+！！！！！！！！！！！！！！！！！！！！！！！！！！先捕获后冒泡！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+
+阻止事件冒泡：
+e.stopPropagation();
+
+只能在ie下用的：
+obj.attachEvent(on+type,function(){});
+只支持冒泡，不支持捕获
+顺序是相反的
+this指向window
+阻止冒泡window.event.cancelBubble = true;
+
+利用事件冒泡解决的问题
+事件代理/事件委托：
+利用事件冒泡。把子元素的同一个事件绑定到父元素上
+ var target = e.target || window.event.srcElement;
+
+
+创建对象：document.createElement("div");
+删除对象：父元素.removeChild(子元素);
+追加元素：父元素.appendChild(子元素);
+改变父元素的innerHtml
+
+
+
+
+
+
+
+
+

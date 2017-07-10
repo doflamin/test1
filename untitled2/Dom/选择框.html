@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        #container{
+            width: 400px;
+            height: 300px;
+            background: #cccccc;
+            border: solid 1px #000000;
+            margin: 100px auto;
+        }
+        #nav{
+            height: 30px;
+            border-bottom: solid 1px #000000;
+        }
+        #nav li{
+            width: 120px;
+            height: 30px;
+            float: left;
+            background:gray;
+            margin-right: 5px;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+        }
+        #nav .selected{
+            background: #000000;
+            color: #ffffff;
+        }
+        #content div{
+            display: none;
+
+        }
+        #content .selected{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <ul id="nav">
+        <li class="selected">html</li>
+        <li>css</li>
+        <li>javascript</li>
+    </ul>
+    <div id="content">
+        <div class="selected">111</div>
+        <div>222</div>
+        <div>333</div>
+    </div>
+</div>
+
+
+<script>
+    var oNav = document.getElementById("nav");
+    var aLi = oNav.getElementsByTagName("li");
+    var oContent = document.getElementById("content");
+    var aDiv = oContent.getElementsByTagName("div");
+    for(var i=0;i<aLi.length;i++){
+        aLi[i].index = i;//给li对象自定义属性，保存住当前的li的值
+        aLi[i].onclick = function(){
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].className = "";
+                aDiv[i].className = "";
+            }
+            this.className = "selected";
+            aDiv[this.index].className = "selected";
+        }
+    }
+
+
+</script>
+</body>
+</html>

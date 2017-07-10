@@ -1,0 +1,2 @@
+location.href//重定向
+userAgent//用户信息

@@ -1,0 +1,50 @@
+.blog h2{
+    color: #3c3b3b;
+    font-weight: 600px;
+    font-size: 2.5em;
+}
+.blog{
+    margin: 4em 0;
+
+}
+.fashion-blogs h3 a{
+    text-decoration: none;
+    color: #525252;
+}
+.fashion-blogs h3 a:hover{
+    color: #e24d8d;
+}
+a.read {
+    background: #fa558f;
+    padding: 8px 10px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0.5em 0 0em 0;
+    border: 2px solid #fa558f;
+    color: #fff;
+    display: inline-block;
+}
+
+a.read:hover {
+    border: 2px solid #E92D50;
+    background: #E92D50;
+    color: #fff;
+}
+.fashion-blogs p {
+    color: #999;
+    line-height: 1.8em;
+    margin: 0.5em 0;
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.container {
+    width: 1170px;
+}

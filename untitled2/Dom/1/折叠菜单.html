@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>折叠菜单</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        .div1{
+            width: 200px;
+            height: 30px;
+            background: #000000;
+            color: #ffffff;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+        }
+        #nav1,#nav2{
+            display: none;
+        }
+        #nav1 li{
+            width: 199px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+            border-right: 1px solid #000000;
+            border-bottom: 1px solid #000000;
+
+        }
+        #nav1 li:hover{
+            background: #cccccc;
+        }
+        #nav2 li{
+            width: 199px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+            border-right: 1px solid #000000;
+            border-bottom: 1px solid #000000;
+
+        }
+        #nav2 li:hover{
+            background: #cccccc;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="guanli" class="div1">
+        <h3>管理区</h3>
+    </div>
+    <ul id="nav1">
+        <li>001</li>
+        <li>002</li>
+        <li>003</li>
+    </ul>
+
+    <div id="jiaoliu" class="div1">
+        <h3>交流区</h3>
+    </div>
+    <ul id="nav2" >
+        <li>001</li>
+        <li>002</li>
+        <li>003</li>
+    </ul>
+</div>
+
+
+<script>
+    var oGuanli = document.getElementById("guanli");
+    var oNav1 = document.getElementById("nav1");
+    var aLi1 = oNav1.getElementsByTagName("li");
+
+    var oJiaoliu = document.getElementById("jiaoliu");
+    var oNav2 = document.getElementById("nav2");
+    var aLi2 = oNav2.getElementsByTagName("li");
+        oGuanli.onclick = function(){
+//            oNav1.style.display = "block";
+            if(oNav1.style.display == "block" ){
+
+                    oNav1.style.display = "none"
+
+            }
+            else{
+
+                    oNav1.style.display = "block"
+
+            }
+        };
+
+
+        oJiaoliu.onclick = function(){
+//            oNav2.style.display = "block";
+            if(oNav2.style.display == "block" ){
+
+                    oNav2.style.display = "none"
+
+    }
+            else{
+
+                    oNav2.style.display = "block"
+
+            }
+        };
+
+
+
+
+</script>
+</body>
+</html>

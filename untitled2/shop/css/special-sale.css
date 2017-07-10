@@ -1,0 +1,71 @@
+body{
+    height: 1770px;
+}
+#header{
+    background: url(../img/banner.jpg) no-repeat center;
+    height: 400px;
+}
+#brand a{
+    float: left;
+    width: 116px;
+    height: 99px;
+    margin-right: 23px;
+    margin-bottom: 20px;
+}
+#brand{
+    height: 256px;
+}
+#good h2{
+    display: block;
+position: relative;
+    left: -1115px;
+}
+/* product开始 */
+#product{
+    height: 1000px;
+}
+.product-info{
+    width: 340px;
+    height: 440px;
+    border: 1px solid #ccc;/*给div加边框*/
+    float: left;
+    margin-right: 30px;
+    margin-top: 30px;
+}
+.product-info img{
+    width: 248px;
+    height: 248px;
+    border: 1px solid #ccc;/*给图片加边框*/
+}
+.product-info .new{
+    background: #fa558f;
+    color: #fff;
+    float: right;
+}/*右上角的new设置*/
+.product-detail{
+    background: #fcf9ff;
+    width: 330px;
+    height: 190px;
+    padding-left: 10px;
+
+}/*产品名位置*/
+.product-detail h3{
+    /*margin-top: 10px;*/
+}/*产品名设置*/
+.add{
+    width: 150px;
+    height: 50px;
+    background: orange;
+    color: #fff;
+    border: 0;
+    margin-top: 5px;
+    font-size: 20px;/*按钮大小*/
+}/*按钮设置*/
+.product-detail input{
+    width: 150px;
+    height: 30px;
+    text-indent: 10px;/*输入起始位置*/
+    outline: none;
+}/*输入框设置*/
+/* product结束 */
+

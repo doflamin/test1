@@ -1,0 +1,92 @@
+
+#login-container{
+    margin-top: 30px;
+    height: 400px;
+}/*最外面的div设置*/
+#login-container form{
+    width: 570px;
+    height: 290px;
+    float: left;
+}/*form表单的设置*/
+#login-container h5{
+    color: #5d5959;
+    font-size: 20px;
+}/*对用户名和密码这几个字的设置*/
+#login-container label{
+    margin-top: 20px;
+    display: block;
+}/*点到字就可以在框里输入*/
+#login-container label input{
+    width: 400px;
+    height: 38px;
+    outline: none;/*没有蓝色外边框*/
+    text-indent: 10px;/*文本向前缩进10像素*/
+    font-size: 20px;/*输入字体的大小*/
+}/*对输入框进行设置*/
+/* 属性选择器 对具有设置好的属性的选择器 */
+#login-container input[value="login"]{
+    width: 114px;
+    height: 41px;
+    background: #EF8743;
+    color: #fff;
+
+}/*登录按钮进行设置*/
+#login-container .btn{
+    font-size: 20px;
+    border: 0;
+    border-radius: 10px;/* css3属性，边框圆角，有兼容性问题 */
+    cursor: pointer;/*鼠标变小手*/
+    margin-top: 20px;
+}/*登录按钮进行设置*/
+#login-container .btn:hover {
+    border: 1px solid #000;
+}/*登录按钮的边框的变色进行设置*/
+#login-container input[value="login"]:hover {
+    background: #ffffff;
+    color: #000;
+}/*登录按钮的内容的变色进行设置*/
+#forget{
+    color: #5d5959;
+    text-decoration: underline;
+    margin-top: 20px;
+    display: block;
+}/*忘记密码几个字的设置*/
+/*对右边开始设置*/
+#register{
+    width: 540px;
+    float: right;
+}/*右边的大块设置*/
+#register h3{
+    color: #EF8743;
+}/*对没有帐号的几个字的设置*/
+#register p{
+    color: #999;
+    margin: 20px 0;
+}/*对一段文字p设置*/
+#register .btn{
+    width: 106px;
+    height: 42px;
+    background: #fff;
+    border: 1px solid #000;/*边框设置*/
+    display: block;/*设置为块级元素*/
+    text-align: center;/*字体水平居中*/
+    line-height: 42px;/*行高 等于高垂直居中*/
+    color: #000;
+}/*新用户注册的按钮设置*/
+#register .btn:hover {
+    background: #EF8743;
+    border-color: #EF8743;
+    color: #fff;
+}/*新用户注册按钮变色显示*/
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,143 @@
+
+对象分为;属性和行为
+后端语言：node.js
+
+变量：电脑的内存里开辟一块空间，空间里放东西
+ js是一种弱类型语言
+var:variable
+js的基本数据类型五种：
+number    string(加双引号或者单引号)         boolean(true/false)      undefined           null
+
+var myName = "lisi";//驼峰式命名
+
+alert//弹出框
+
+	函数 两个参数
+	prompt(“请输入” “。。。”)一个必须参数和一个可选参数
+
+NaN:not a number
+
+	var 34bad;//不能以数字开头
+	var per人;//不能包含中文
+	var bad-var;//非法的-
+	var var;//var就是一个关键字，所以很明显不能用来做变量名
+
+
+一个等号是赋值
+两个等号是判断值是否相等
+三个等号是判断值和类型是否相等
+c++;//这与c=c+1;效果是一样的
+另外要注意的一点是,变量的名称是区分大小写的!
+
+字符串的拼接：
+console.log(5+10)     //15
+console.log(5+"10")     //510
+
+var k=5;
+console.log(k-3)    //2
+
+console.log(k-'a')    //NaN
+type of 返回的是一个字符串，然后在字符串里写基本的数据类型
+
+
+
+
+&&与
+||或
+！非
+infinity无限的
+
+（运算时
+true是1
+false是0）
+转换成字符串的话只要在后面加上一个空的字符串
+
+  //命名规范
+            var iNum = 5;//int
+            var fNum = 0.5;//float
+            var sName = "zhangsan";//string
+            var bFlag = true;//boolean
+
+
+prompt:
+
+第一个是提示，第二个是输入的默认值
+三目运算符：console.log(2 < 4? "yes":"no") 问号前面如果运算只为真，就表达前面的，如果为假，就表达后面的
+switch是判断值和类型，if只判断值
+用的最多的是if
+
+
+
+函数必须要调用！！！
+函数直接量：先定义，后调用
+变量有两种：
+局部变量：只能作用一部分的函数
+全局变量：可以作用全局的函数
+内置函数：
+array：数组 属于一个对象
+property：属性
+对象和数组是相通的
+
+
+
+else不是必需的
+
+循环语句：
+1、for(var i=0;i<3;i++){
+console.log(i);
+}
+2、while（）｛
+｝
+3、do{
+
+} while();
+js特有的：
+循环对象与数组用的
+4、for ( var p in  arr[1，2，3]){
+
+}
+循环谁就in谁
+
+var p 代表数组的下标
+变量用中括号
+常量用.
+形参可以随便取名字
+
+
+3种引用类型（存在于堆里面）：
+内置对象；
+自定义对象；
+dom对象；1·
+
+
+
+
+oDiv.style.width //只能取内联样式的值，可以赋值
+offsetwidth //只能取值，不能赋值
+
+offset width length
+offset （上左） 取的是已经定位的离他最近的祖先元素的值距离
+offset parent 取已经定位的离他最近的祖先元素
+
+
+
+animate(你让哪个对象做动画就放那个对象，属性（传对象，你想让哪个属性做动画，不写单位），回调函数function(){}前面执行完再执行)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
