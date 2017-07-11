@@ -1,0 +1,101 @@
+三种对象：
+1：内置对象
+2：自定义对象
+3：DOM对象
+
+获取DOM对象的方法
+1：docuemt.getElementById();
+2: context.getElementsByTagName()
+3: conText.getElementsByClassName();
+4: context,getElementByName();
+5: document,querySelector(Selector); 返回第一个元素  ES5
+6：document,querySelectorAll(Selector) 返回一个数组   ES5
+
+DOM操作：
+
+1：元素查找;
+2：元素遍历;
+3：元素的操纵
+
+RegExp:regular Expression
+按照一定规则进行字符串匹配
+
+直接量：var reg = /xxx/正则表达式
+
+var reg = new RegExp('xxx')
+/c{3,4}/ 大于三次小于四次
+/c{2}/  c匹配两次
+/c{n，}/  c匹配大于n次无上限
+成功返回c，失败返回null
+
+*表示0次或者多次
++表示1次或者多次
+？表示0次或者1次
+c* 和 c{0,}一个意思
+c+ 和 c{1,}一个意思
+c？ 和 c{0，1}一个意思
+*？ 0次
+
+
+
+/^开头，结尾$/
+/,/
+/|/匹配或者
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
