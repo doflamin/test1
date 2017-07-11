@@ -5,6 +5,39 @@
     <title></title>
 </head>
 <body>
-4665asdasd5
+<ul id="ul1">
+    <li>item 1</li>
+    <li class="cc aa">item 1</li>
+    <li class="aa">item 2</li>
+</ul>
+<div id="div1">
+    <h1>haha</h1>
+    <h2 class="aa">hehe</h2>
+    <h3 class="aa">xixi</h3>
+</div>
+<script src="李铁铭的函数库.js"></script>
+<script>
+    function getByClass(className,context){
+        context = contex||document;
+        var result =[];
+        var arr = contex.getElementsByTagName('*');
+        var re = new RegExp("\\b"+className+"\\b");
+        for(var i=0; i<arr.length; i++){
+            if(re.test(arr[i].className)){
+                result.push(arr[i]);
+            }
+        }
+            return result;
+
+
+
+
+
+
+
+
+    }
+
+</script>
 </body>
 </html>
