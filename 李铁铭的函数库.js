@@ -1,5 +1,12 @@
+/**
+ * 选中功能
+ * @param selector
+ * @param context
+ * @returns {*}
+ */
+
 function $(selector, context) {
-    context = context || document;
+    context = context || document;//传递参数
     switch(selector.charAt(0)){
         case '#': //id
             return [document.getElementById(selector.substring(1))];
@@ -102,6 +109,7 @@ function remove(elem) {
 }
 
 /**
+ *
  * @param elem 当前元素
  * @return {Array} 返回当前元素的元素节点
  */
@@ -129,6 +137,7 @@ function cloneObj(obj) {
 }
 
 /**
+ * 合并两个对象
  * @param target 被合并的目标对象
  * @param obj 要合并的对象
  * @return 返回合并的新的对象
@@ -171,6 +180,61 @@ function getStyle(elem, attr) {
 }
 
 
+
+
+/**
+ *
+ * 通过js设置css
+ * @param elem
+ * @param attr
+ * @param value
+ * @returns {*}
+ */
+function setcss(elem, attr, value) {
+    if(value){//如果给value传了值
+        elem.style[attr] = value;
+    }else{
+        if(typeof attr === 'string'){
+            return getStyle(elem, attr);
+        }else{
+            for(var p in attr){
+                switch(p){
+                    case 'width':
+                    case 'height':
+                    case 'padding':
+                    case 'paddingLeft':
+                    case 'paddingRight':
+                    case 'paddingTop':
+                    case 'paddingBottom':
+                        value = /\%/.test(attr[p])?attr[p]:Math.max(parseInt(attr[p]), 0) + 'px';
+                        break;
+                    case 'left':
+                    case 'top':
+                    case 'bottom':
+                    case 'right':
+                    case 'margin':
+                    case 'marginLeft':
+                    case 'marginRight':
+                    case 'marginTop':
+                    case 'marginBottom':
+                        value = /\%/.test(attr[p])?attr[p]:parseInt(attr[p]) + 'px';
+                        break;
+                    default:
+                        value = attr[p];
+                }
+                elem.style[p] = value;
+            }
+        }
+    }
+}
+
+
+/**
+ * 添加事件和移除事件
+ * @param elem
+ * @param type
+ * @param fn
+ */
 function addEvent(elem, type, fn) {
     if(elem.addEventListener){//标准
         elem.addEventListener(type, fn, false);

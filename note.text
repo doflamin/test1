@@ -44,11 +44,19 @@ c？ 和 c{0，1}一个意思
 
 
 
+类：具有相同的属性和方法的对象的集合
+有时也叫构造函数
+定义一个函数首字母大写一般都是类
+new是类
+function
+prototype(模子)原型
+Cat.prototype.eat = function(){}
+定义一个函数的时候 将属性放在构造函数里，方法放在原型中
+调用函数时，先查找构造函数，再查找原型，再查找父类知道obj
 
 
-
-
-
+链式操作：
+$('.aa').mouseover(function(){}).mouseout(function(){})
 
 
 
