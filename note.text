@@ -58,7 +58,7 @@ Cat.prototype.eat = function(){}
 链式操作：
 $('.aa').mouseover(function(){}).mouseout(function(){})
 
-
+原生对象 -> jq对象
 
 
 
