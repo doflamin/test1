@@ -58,23 +58,58 @@ Cat.prototype.eat = function(){}
 链式操作：
 $('.aa').mouseover(function(){}).mouseout(function(){})
 
-原生对象 -> jq对象
+原生对象 -> jq对象 $()
+jq对象 -> 原生对象[0] .get(0)
 
 
 
+文档就绪函数：$(function(){});
+*选中所有元素
+，分组选择器
+>亲子代
+空格 后代
++下一个兄弟
+~后面所有的兄弟
+：eq 第n个儿子：$("#uli1 li:eq(0)").css("background"."red");
+:even偶数选择器
+:odd奇数选择器
+:first第一个li
+:last最后一个
+:gt大于下角标
+:lt小于下角标
+:not过滤选择器(参数是选择器)
+:target
+<a href="#div1">xxx</a>
+#div3:target{
+bg:#ccc
+}
+:contains 内容选择器：
+
+:has 包含选择器
+:empty 空选择器
+看到的是渲染树
+：hidden选择所有不可见的元素
+：visible选择可见的
+子元素选择器：
+nth-child（2n）:第几个孩子（整个表达式从1开始数,但是n从0开始数）
+
+单选框 radio
+复选框 checkbox
+
+js中font-size不这么写，要写成fontSize
 
 
 
+hasclass返回的是true或者false
+width:内容的宽度
+innerwidth():内容和padding的宽度
+outerwidth()：内容和padding和boder的宽度 括号里写上true的话就会加上margin的宽度
+写参数就是赋值
+不写就是读取
+offset相对于文档距离
+position相对于离他最近的已经定位的祖先元素
 
-
-
-
-
-
-
-
-
-
+appendTo 把子元素追加到父元素上
 
 
 
