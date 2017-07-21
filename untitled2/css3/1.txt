@@ -1,2 +1,44 @@
+css属性要写五个
+6
 文档超出...三个属性
-white-space:
+           ｛
+                        white-space: nowrap;不换行
+                        overflow: hidden;溢出隐藏
+                        text-overflow: ellipsis;文档溢出取省略号
+｝
+            display: flex;弹性盒模型
+            flex-grow: 1;分成一份
+
+
+overflow: scroll;隐藏溢出容器的内容，溢出的内容将以卷动滚动条的方式呈现。
+
+box-shadow 盒子阴影 5px 5px 5px rgba(50, 50, 50, .4);
+                    水平 垂直 模糊 颜色
+
+
+
+
+
+                    变形
+transform：rotate（30deg）顺时针30度
+transform: scale(1.2) 放大1.2倍
+transform-origin: 100px 50px;以谁为圆心旋转
+transform: translate(100px, 100px) 水平垂直移动距离
+
+过渡
+
+transition: all     1s      ease;
+            所有的  每一秒  动画效果
+
+
+
+
+视角：
+perspective: xxxxpx
+视角原点
+perspective-origin：50% 50%:
+保持3D
+transform-style:preserve-3d
+
+
+
