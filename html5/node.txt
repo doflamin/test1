@@ -1,0 +1,58 @@
+语义化标签：
+1便于开发者阅读
+2便于搜索引擎优化
+
+网站：站长之家
+html5新标签的下载
+ html5shiv.js
+css重置网站：Normalize.css
+
+Ajax不刷新界面的请求
+
+className返回的是字符串
+classlist 返回的是对象
+toogle切换
+
+
+
+JSON
+parse字符串转化成对象
+stringify对象转化为字符串
+
+JSON只能解析符合JSON格式的字符串
+eval()解析任意字符串 不安全的
+深克隆有两种方法
+一种是利用递归
+一种是用JSON
+先把对象转化成字符串
+再把字符串转化成对象
+
+
+JSON在线解析
+JSON兼容性问题可以去下载一个JSON2的文件解决
+
+
+ var oDiv1 = document.getElementById("div1");
+        oDiv1.aa = "123";//相当于jq prop()
+        console.log(oDiv1.aa);
+
+        oDiv1.setAttribute("bb", "234");//相当于jq attr()
+        console.log(oDiv1.getAttribute("bb"));
+自定义属性一般以data-开头
+ console.log($("#div1").data("aaBb"));//aa-bb  aaBb
+js加载是单线程的
+defer解析完成再执行，解析和网络下载是同步的
+async网络下载完成就立即执行，解析和网络下载是同步的
+
+
+
+向下取整 floor
+向上取整 celi
+
+
+
+
+
+
+
+
