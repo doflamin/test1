@@ -2,3 +2,24 @@
 端口号不同
 协议不同
 域名不同
+主域和子域
+文件不同不属于跨域
+
+$.get("http://www.b.com/index.html",{
+name : "zhangsan"
+})
+src是不存在跨域的
+1  JSON是一种传输的格式
+JSONp是一种跨域的方式。原理是利用script的src标签 通过src后面的URL跟参数 用get的方式从一个域传到另一个域
+同时传回一个方法的名字 callback
+再在b域里通过调用方法名字把值从b传回a
+2  iframe 是一个标签 后面有src属性
+ src调用其他的域
+
+
+ 3服务器代理方式
+ 后端是不存在跨域的
+
+ 4postessage（对象，哪个域 不用具体写哪个文件）
+ （html5提供的一种新方式）
+

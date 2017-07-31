@@ -40,6 +40,9 @@ JSON兼容性问题可以去下载一个JSON2的文件解决
         console.log(oDiv1.getAttribute("bb"));
 自定义属性一般以data-开头
  console.log($("#div1").data("aaBb"));//aa-bb  aaBb
+
+
+ webworker 不能进行dom操作
 js加载是单线程的
 defer解析完成再执行，解析和网络下载是同步的
 async网络下载完成就立即执行，解析和网络下载是同步的
@@ -48,10 +51,27 @@ async网络下载完成就立即执行，解析和网络下载是同步的
 
 向下取整 floor
 向上取整 celi
+localStorage方法存储时间没有限制
 
+canvas标签
+宽高在内联里设置
 
+script设置
+要先获取上下文
+.getContext("2d")
+.beginPath();开始画
+.moveto（100px。200px）鼠标落点
+.lineto（）鼠标画到哪里
+.stroke设置颜色描边
+.strokeStyle =""
+.lineWidth线的宽度
+.lineCap = “round”设置端点样式
 
-
+圆弧
+如果是圆
+xy对应的是圆心位置
+如果是椭圆就是切线的交点
+模版库echarts
 
 
 
