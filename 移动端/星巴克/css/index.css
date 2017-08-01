@@ -1,0 +1,149 @@
+#header{
+    height: 100px;
+    display: flex;
+}
+#menu{
+    width: 82px;
+    height: 46px;
+    margin-top: 27px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+#club{
+    width: 82px;
+    height: 42px;
+    font-size: 14px;
+    margin-right: 10px;
+    margin-top: 29px;
+    transition: all 1s ease;
+}
+#club span a{
+    color: #b89f7a;
+    font-weight: bold;
+}
+#logo{
+    flex-grow: 1;
+    text-align: center;
+}
+#logo img{
+    width: 73px;
+    height: 73px;
+    margin-top: 8px;
+}
+
+#banner{
+    width: 100%;
+    position: relative;
+}
+#banner img{
+    width: 100%;
+}
+#banner img:nth-child(2){
+    display: none;
+}
+#konw-more{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 20px;
+}
+#ad{
+    font-size: 15px;
+    background: #47474A;
+    color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+@media (max-width: 991px) {
+    #banner img:nth-child(1){
+        display: none;
+    }
+    #banner img:nth-child(2){
+        display: block;
+    }
+}
+
+
+@media (max-width: 767px) {
+    #club{
+        font-size: 12px;
+    }
+}
+#header-hidden-menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 270px;
+    height: 100%;
+    background: #292929;
+    color: #ffffff;
+    display: none;
+    z-index: 1;
+}
+#header-hidden-menu li{
+    height: 46.4px;
+    text-indent: 15px;
+    cursor: pointer;
+    font-size:15px;
+}
+.top{
+    color:#b89f7a;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: solid 1px #707070;
+}
+.top li:hover{
+    color:#ffffff;
+}
+.bottom{
+    margin-top: 20px;
+}
+.bottom li:hover{
+    color:#b89f7a;
+}
+.bottom span{
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    position: relative;
+    left: 160px;
+    top: 10px;
+}
+
+#starclub{
+    height: 220px;
+    width: 100%;
+    background: #000000;
+    margin-top: -5px;
+}
+#starclub-container{
+    height: 220px;
+    width: 70%;
+    margin: 0 auto;
+}
+#rewards-mark-left{
+    height: 220px;
+    width: 50%;
+}
+#rewards-mark-left span{
+    font-size: 20px;
+    /*font-weight: bolder;*/
+    color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+

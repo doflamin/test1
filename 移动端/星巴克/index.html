@@ -1,45 +1,96 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title></title>
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-    
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        header{
-            height: 90px;
-         background: #FFFFFF ;
-        }
-        header img{
-            width: 73px;
-            height: 73px;
-            display: block;
-            margin: 10px auto;
-        }
-        figure img{
-            width: 100%;
-            height: 100%;
-        }
-        #menu{
-            width: 20px;
-            height: 20px;
-            float: left;
-            margin-left: 30px;
-        }
-    </style>
+    <title>首页 | 星巴克</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-<header>
-    <img src="imgs/menu.png" alt="" id="menu"/>
-    <img src="imgs/logo.png" alt=""/>
+<header id="header">
+    <div id="menu">
+        <img src="imgs/menu_icon.svg" alt="">
+        <p>菜单</p>
+    </div>
+    <div id="logo">
+        <img src="imgs/logo.svg" alt="">
+    </div>
+    <div id="club">
+            <span>星享俱乐部<br>
+                <a href="">登录</a>
+                    或
+                <a href="">注册</a>
+            </span>
+    </div>
+    <div id="header-hidden-menu">
+        <ul class="nav navmenu-nav top">
+            <li>English</li>
+            <li>星巴克门店</li>
+            <li>天猫旗舰店</li>
+        </ul>
+        <ul class="nav navmenu-nav bottom">
+            <li>首页</li>
+            <li>新品推荐
+                <span></span>
+            </li>
+            <li>星享俱乐部</li>
+            <li>星巴克移动应用
+                <span></span>
+            </li>
+            <li>星礼卡</li>
+            <li>咖啡文化
+                <span></span>
+            </li>
+            <li>饮品美食                <span></span>
+            </li>
+            <li>关于我们                <span></span>
+            </li>
+            <li>帮助中心                <span></span>
+            </li>
+        </ul>
+    </div>
 </header>
-<figure>
-    <img src="imgs/kv-desktop-cn-20170724152434.jpg" alt=""/>
+<figure id="banner">
+    <a href="">
+        <img src="imgs/banner1.jpg" alt="">
+        <img src="imgs/banner2.jpg" alt="">
+    </a>
+    <span id="ad">广告</span>
+    <span id="konw-more">了解更多>></span>
 </figure>
+<div id="starclub">
+<div id="starclub-container">
+<div id="rewards-mark-left">
+    <span>星享卡</span>
+    <img src="" alt=""/>
+</div>
+
+</div>
+
+
+
+</div>
+<script src="js/jquery-1.11.2.js"></script>
+<script>
+    $(function(){
+
+        $("#menu").on("click",function(){
+            $("#header-hidden-menu").show();
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+    });
+</script>
 </body>
 </html>
