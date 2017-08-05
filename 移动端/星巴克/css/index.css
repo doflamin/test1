@@ -121,22 +121,62 @@
 #starclub{
     height: 220px;
     width: 100%;
-    background: #000000;
+    background: #0f0f0f;
     margin-top: -5px;
 }
 #starclub-container{
     height: 220px;
-    width: 70%;
+    width: 1140px;
     margin: 0 auto;
+    background: url(../imgs/rewards_bg.png) 0 0 no-repeat;
+    background-size: contain;
 }
 #rewards-mark-left{
+    width: 260px;
     height: 220px;
-    width: 50%;
+    padding-left: 90px;
+    margin-left: 180px;
+    display: inline-block;
+/*position: relative;*/
+    /*top: -100px;*/
 }
-#rewards-mark-left span{
+#rewards-mark-left p{
     font-size: 20px;
     /*font-weight: bolder;*/
     color: #FFFFFF;
+    text-align: left;
+    position: relative;
+    top: 60px;
+}
+#rewards-mark-logo{
+    width: 160px;
+    height: 38.5185185185px;
+    background: url(../imgs/rewards_logo_20170209.svg) 0 0 no-repeat;
+    background-size: contain;
+    position: relative;
+    top: 70px;
+}
+#rewards-mark-right{
+    height: 220px;
+    /*width: 100px;*/
+    display:inline-flex;
+
+
+}
+/*#rewards-content-title{*/
+    /*color: #FFFFFF;*/
+    /*flex-grow: 1;*/
+    /*display: inline;*/
+/*}*/
+#rewards-content-title {
+    color: #fff !important;
+    font-size: 25px !important;
+    margin: 0px !important;
+}
+#rewards-content-text {
+    color: #fff !important;
+    font-size: 16px !important;
+    margin: 0 0 5px !important;
 }
 
 
