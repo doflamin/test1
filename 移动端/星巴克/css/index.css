@@ -137,7 +137,8 @@
     padding-left: 90px;
     margin-left: 180px;
     display: inline-block;
-/*position: relative;*/
+position: relative;
+    top: 0px;
     /*top: -100px;*/
 }
 #rewards-mark-left p{
@@ -158,26 +159,94 @@
 }
 #rewards-mark-right{
     height: 220px;
-    /*width: 100px;*/
+    /*width: 100%;*/
     display:inline-flex;
-
-
+    position: relative;
 }
-/*#rewards-content-title{*/
-    /*color: #FFFFFF;*/
-    /*flex-grow: 1;*/
-    /*display: inline;*/
-/*}*/
 #rewards-content-title {
-    color: #fff !important;
-    font-size: 25px !important;
-    margin: 0px !important;
+    color: #fff;
+    font-size: 25px;
+    width: 430px;
+    height: 28px;
+    line-height: 28px;
+    position: relative;
+    top:50px;
+
 }
 #rewards-content-text {
-    color: #fff !important;
-    font-size: 16px !important;
-    margin: 0 0 5px !important;
+    color: #fff;
+    font-size: 16px;
+    margin: 0 0 5px;
+    height: 20px;
+    width: 500px;
+    position: absolute;
+    left: 0;
+    top: 80px;
 }
+#rewards-content-btn{
+    position: absolute;
+    top: 120px;
+    width: 430px;
+    height: 28px;
+}
+#rewards-mark-right button{
+    color: #a98e67;
+    padding: 14px 40px;
+    border: 2px #a98e67 solid;
+    margin: 7px 14px 7px 0;
+    background: #000;
+    cursor: pointer;
+}
+#rewards-mark-right button:hover{
+    background: #a98e67;
+    color: #ffffff;
+    border: 2px #a98e67 solid;
+}
+#rewards-content-btn span{
+    color: #a98e67;
+    margin-left: 50px;
+    cursor: pointer;
+}
+#rewards-content-btn span:hover{
+    color: #8b5733;
+}
+#app{
+    height: 220px;
+    width: 100%;
+    position: relative;
+    margin-top: -20px;
+    background: url("../imgs/app_bg.gif");
+}
+#app-container{
+    width: 1170px;
+    height: 220px;
+    margin: 0 auto;
+}
+#app-device{
+    width: 350px;
+    height: 200px;
+    margin-top: 20px;
+    background: url("../imgs/app_device.png") no-repeat center;
+    background-size: contain;
+    position: absolute;
+}
+#twoDM{
+    width: 130px;
+    height: 130px;
+    background: url("../imgs/app_qr_20170209.png") no-repeat center;
+    background-size: contain;
+    position: absolute;
+    left: 600px;
+    top: 10px;
+}
+#andriod{
+    position: absolute;
+    left: 700px;
+    top: 200px;
+    cursor: pointer;
+}
+
+
 
 
 

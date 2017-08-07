@@ -8,6 +8,8 @@
 $.get("http://www.b.com/index.html",{
 name : "zhangsan"
 })
+
+
 src是不存在跨域的
 1  JSON是一种传输的格式
 JSONp是一种跨域的方式。原理是利用script的src标签 通过src后面的URL跟参数 用get的方式从一个域传到另一个域
