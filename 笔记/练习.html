@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+
+
+//    var user = {
+//        greet: "Hello!",
+//        greetUser: function(userName) {
+//            console.log(this.greet + " " + userName);
+//        }
+//    };
+//
+//    var greet1 = {
+//        greet: "Hola"
+//    };
+//
+//    user.greetUser.call(greet1, "Rahul"); // 输出"Hola Rahul"
+//    user.greetUser.apply(greet1, ["Rahul"]); // 输出"Hola Rahul"
+
+var user = {
+    greet: "Hello!",
+    greetUser: function(userName) {
+        console.log(this.greet + " " + userName);
+    }
+};
+
+var greetHola = user.greetUser.bind({greet: "Hola"});
+var greetBonjour = user.greetUser.bind({greet: "Bonjour"});
+
+greetHola("Rahul") // 输出"Hola Rahul"
+greetBonjour("Rahul") // 输出"Bonjour Rahul"0
+
+</script>
+</body>
+</html>

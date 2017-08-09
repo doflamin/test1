@@ -17,6 +17,9 @@ DOM操作：
 2：元素遍历;
 3：元素的操纵
 
+
+正则：
+
 RegExp:regular Expression
 按照一定规则进行字符串匹配
 
