@@ -149,15 +149,41 @@ new obj
 prototype原型（模子）
 
 
+.split() join()?
+前者是切割成数组的形式，
+后者是将数组转换成字符串
+
+
+.slice() splice()?
+slice() 方法可从已有的数组中返回选定的元素。
+splice() 方法向/从数组中添加/删除项目，然后返回被删除的项目。
 
 
 
 
+typeof？typeof [ ]返回数据类型是？
+//判断基本数据类型；var a=[];typeof a输出object；
+//本来判断一个对象类型用typeof是最好的，不过对于Array类型是不适用的，
+//可以使用 instanceof操作符：
+       var arrayStr=new Array("1","2","3","4","5");
+       alert(arrayStr instanceof Array);
+//当然以上在一个简单的页面布局里面是没有问题的，如果是复杂页面情况，
+//入获取的是frame内部的Array对象，可以用这个函数判断：
+       function isArray(obj) {
+          return Object.prototype.toString.call(obj) === '[object Array]';
+       }
 
 
 
+JavaScript提供了哪几种“异步模式”？
+    1、回调函数（callbacks）
+    2、事件监听
+    3、Promise对象
 
 
-
+ js的几种继承方式？
+    1.使用对象冒充实现继承
+    2.采用call、Apply方法改变函数上下文实现继承
+    3.原型链方式继承
 
 
