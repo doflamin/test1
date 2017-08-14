@@ -47,10 +47,8 @@ JSONpÊÇÒ»ÖÖ¿çÓòµÄ·½Ê½¡£Ô­ÀíÊÇÀûÓÃscriptµÄsrc±êÇ© Í¨¹ýsrcºóÃæµÄURL¸ú²ÎÊý ÓÃgetµÄ·
 2  iframe ÊÇÒ»¸ö±êÇ© ºóÃæÓÐsrcÊôÐÔ
  srcµ÷ÓÃÆäËûµÄÓò
 
-
  3·þÎñÆ÷´úÀí·½Ê½
  ºó¶ËÊÇ²»´æÔÚ¿çÓòµÄ
-
  4postessage£¨¶ÔÏó£¬ÄÄ¸öÓò ²»ÓÃ¾ßÌåÐ´ÄÄ¸öÎÄ¼þ£©
  £¨html5Ìá¹©µÄÒ»ÖÖÐÂ·½Ê½£©
 
