@@ -1,5 +1,18 @@
 css属性要写五个
-6
+-webkit-           chrome safari
+-moz-             firefox
+-o-               opera
+-ms-                 IE
+什么也不写
+
+
+判断兼容性的网站：
+www.caniues.com
+
+
+
+
+
 文档超出...三个属性
            ｛
                         white-space: nowrap;不换行
@@ -9,12 +22,19 @@ css属性要写五个
             display: flex;弹性盒模型
             flex-grow: 1;分成一份
 
+强制换行word-break:break-all
+
 
 overflow: scroll;隐藏溢出容器的内容，溢出的内容将以卷动滚动条的方式呈现。
 
 box-shadow 盒子阴影 5px 5px 5px rgba(50, 50, 50, .4);
                     水平 垂直 模糊 颜色
 
+
+
+w3c标准盒模型：宽高等于内容的宽高
+
+怪异模式下是内容加padding加border
 
 
 
