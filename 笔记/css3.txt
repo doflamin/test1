@@ -1,3 +1,4 @@
+normoal
 css属性要写五个
 -webkit-           chrome safari
 -moz-             firefox
