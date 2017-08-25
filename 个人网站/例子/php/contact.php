@@ -8,7 +8,6 @@ function isEmail($email) {
 }
 
 if (!defined("PHP_EOL")) define("PHP_EOL", "\r\n");
-
 $name     = $_POST['name'];
 $email    = $_POST['email'];
 $comments = $_POST['comments'];
