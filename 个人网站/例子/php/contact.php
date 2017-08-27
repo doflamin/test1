@@ -27,7 +27,6 @@ if(trim($comments) == '') {
 	echo '<div class="error_message">Please enter your message.</div>';
 	exit();
 }
-
 if(get_magic_quotes_gpc()) {
 	$comments = stripslashes($comments);
 }
