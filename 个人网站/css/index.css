@@ -33,18 +33,121 @@
 }
 .abouts-container{
     height: 100%;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     background: #FFFFFF;
     opacity: 0.8;
+    position: relative;
 
 }
 .abouts-container-heading{
     text-align: center;
     position: absolute;
     top: 100px;
-    
-
-
+    left: 35%;
+    margin-bottom: 10px;
+}
+.abouts-container-left{
+    width: 60%;
+    height: 70%;
+    position: absolute;
+    top: 250px;
 
 }
+.abouts-container-left h4{
+    margin-bottom: 10px;
+
+}
+.abouts-container-left p{
+    margin-bottom: 50px;
+}
+.abouts .btn-primary:hover {
+    color: #979497;
+}
+.abouts .btn-primary {
+    padding: 15px;
+    border: 2px solid #746c75;
+    background: none;
+    line-height: 30px;
+    font-size: 12px;
+    color: #372d38;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 0;
+
+}
+a{
+    text-decoration: none;
+}
+#abouts-container-img{
+    position: absolute;
+    top: 250px;
+    right: 30px;
+    padding: 7px;
+    display: block;
+    border: 1px solid #bab4bb;
+}
+#skillset{
+    width: 1519px;
+    height: 540px;
+    position: relative;
+}
+#skillset-heading{
+    height: 170px;
+    width: 80%;
+    margin: 0 auto;
+
+}
+#skillset-heading h2{
+    margin: 0 auto;
+    display: inline-block;
+    position: absolute;
+    left: 42%;
+    top: 50px;
+    text-align: center;
+}
+#skillset-heading h3{
+    position: absolute;
+    left: 40%;
+    top: 100px;
+    text-align: center;
+}
+#skillset-heading h2:after {
+    content: "";
+    display: block;
+    width: 76px;
+    height: 2px;
+    background: #5b4c5c;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    margin-left: -38px;
+}
+#skillset p {
+    font-size: 13px;
+    line-height: 27px;
+    font-weight: 400;
+    padding-bottom: 33px;
+    margin: 0px;
+    display: inline-block;
+    width: 540px;
+    height: 191px;
+    position: absolute;
+    left: 15%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
