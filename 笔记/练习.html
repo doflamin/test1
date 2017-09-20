@@ -1,40 +1,80 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
+<!doctype html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Document</title>
+    <style>
+        .two{
+            width: 50px;
+            height: 40px;
+            background: #0000ff;
+
+
+
+        }
+        .one{
+            width: 100px;
+            height: 40px;
+            background: #ffffff;
+            float: left;
+            margin-right:100px;
+            margin-bottom: 100px;
+            margin-left: 100px;
+            border-right: 2px #0000FF solid;
+        }
+        .one:after {
+            content: "";
+            display: block;
+            width: 76px;
+            height: 2px;
+            background: #5b4c5c;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            margin-left: -38px;
+        }
+        .one:nth-child(3){
+                  border-right: 0px #0000FF solid;
+
+              }
+        .one:nth-child(6){
+            border-right: 0px #0000FF solid;
+
+        }
+        .one:nth-child(7){
+            border-right: 0px #0000FF solid;
+
+        }
+        header{
+            width: 1000px;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
-<script>
+<header>
+    <div class="one">
+        <div class = "two"></div>
+    </div>
+    <div class="one">
+        <div class = "two"></div>
+    </div>
+    <div class="one">
+        <div class = "two"></div>
+    </div>
+    <div class="one">
+        <div class = "two"></div>
+    </div>
+    <div class="one">
+        <div class = "two"></div>
+    </div>
+    <div class="one">
+        <div class = "two"></div>
+    </div>
+    <div class="one">
+        <div class = "two"></div>
+    </div>
+</header>
 
-
-//    var user = {
-//        greet: "Hello!",
-//        greetUser: function(userName) {
-//            console.log(this.greet + " " + userName);
-//        }
-//    };
-//
-//    var greet1 = {
-//        greet: "Hola"
-//    };
-//
-//    user.greetUser.call(greet1, "Rahul"); // 输出"Hola Rahul"
-//    user.greetUser.apply(greet1, ["Rahul"]); // 输出"Hola Rahul"
-
-var user = {
-    greet: "Hello!",
-    greetUser: function(userName) {
-        console.log(this.greet + " " + userName);
-    }
-};
-
-var greetHola = user.greetUser.bind({greet: "Hola"});
-var greetBonjour = user.greetUser.bind({greet: "Bonjour"});
-
-greetHola("Rahul") // 输出"Hola Rahul"
-greetBonjour("Rahul") // 输出"Bonjour Rahul"0
-
-</script>
 </body>
 </html>

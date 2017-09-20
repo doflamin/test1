@@ -11,14 +11,15 @@ doctype:文档类型
 <br />换行
 
 链接a
-图片img(art:失败显示；title:成功显示；)
+图片img(alt:失败显示；title:成功显示；)
 有序列表ol （里面一定要用li）li
 无序列表ul li
 div标签+css
+<textarea row=3行> <textarea/>
 table标签：tr行  td列 border(列表类型)
 段落p（带有行间距）
 span 标签都是矩形的
-行级元素(inline) span、a、img、行级元素的宽和高都是内容撑开的、行级元素和行级元素会在一行显示 不能设置宽和高
+行级元素(inline) span、a、img、form 行级元素的宽和高都是内容撑开的、行级元素和行级元素会在一行显示 不能设置宽和高
 块级元素(block) h1~h6、li、p、table、div、ul、ol、块级元素可以设置宽和高、不设置宽的时候就是充满他的父元素、自己占用一行
 背景颜色background 字体颜色color 宽度width 高度height
 注释ctrl+/
