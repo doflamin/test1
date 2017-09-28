@@ -19,7 +19,7 @@ jsonp原理？ 缺点?
 57.除了jsonp 还有什么跨域方式
 
 javascript跨域有两种情况：
-1、基于同一父域的子域之间，如：http://a.c.com和http://b.c.com
+1、基于同一父域的子域之间，如：http://a.c.com 和 http://b.c.com
 2、基于不同的父域之间，如：http://www.a.com和http://www.b.com
 3、端口的不同，如：http://www.a.com:8080和http://www.a.com:8088
 4、协议不同，如：http://www.a.com和https://www.a.com
