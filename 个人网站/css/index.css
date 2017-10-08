@@ -231,6 +231,9 @@ position: absolute;
 
 
 }
+.row-right{
+    height: 140px;
+}
 .experience-heading h3 {
     font-size: 18px;
     line-height: 30px;
@@ -249,12 +252,14 @@ position: absolute;
 }
 .media {
     margin-top: 0;
+    height: 240px;
 }
 .row-left{
-    display: inline-block;
+    display:inline-block;
     width: 25%;
     height: 188px;
     border-right: 2px solid #CCCCCC;
+    float: left;
 
 }
 
@@ -267,8 +272,165 @@ position: absolute;
     color: #5b4c5c;
     font-style: italic;
 }
+.expertiesdesc h4 {
+    font-size: 14px;
+    font-weight: 300;
+    color: #000000;
+    line-height: normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    float: left;
+    position: relative;
+    left: 53px;
+    top: 5px;
+
+}
+.expertiesdesc h5 {
+      line-height: normal;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      float: left;
+    font-family: 'Crimson Text', serif;
+    color: #5b4c5c;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+      position: relative;
+      left: -20px;
+      top: 30px;
+  }
+.expertiesdesc p {
+    width: 806px;
+    height: 79px;
+    color: #888089;
+    line-height: normal;
+    /*text-transform: uppercase;*/
+    letter-spacing: 2px;
+    float: left;
+    position: relative;
+    left: 50px;
+    top: 60px;
+    font-size: 13px;
+    /*font-weight: 400;*/
+    padding-bottom: 33px;
+}
+#experience{
+    background: #f8f8f8;
+}
+.protfolio{
+    width: 100%;
+    height: 1207px;
+}
+.protfolio-container{
+    width: 1140px;
+    height: 150px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+
+}
+.protfolio-container .heading{
+    height: 100%;
+    width: 100%;
+}
+.protfolio-container .heading h2 {
+    font-size: 19px;
+    line-height: 40px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    display: inline-block;
+    position: relative;
+    left: 500px;
 
 
+}
+.protfolio-container .heading h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #372d38;
+    line-height: 57px;
+    padding-bottom: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.protfolio-container .heading h3 {
+    font-size: 18px;
+    line-height: 30px;
+    color: #5b4c5c;
+    padding-bottom: 0;
+    font-weight: 300;
+    text-transform: none;
+    letter-spacing: 1px;
+}
+.protfolio-container .heading h3 {
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 30px;
+    padding-bottom: 10px;
+    font-weight: 300;
+    text-align:center;
+
+    /*margin: 0px;*/
+}
+.protfolio-container .heading h2:after {
+    content: "";
+    display: block;
+    width: 76px;
+    height: 2px;
+    background: #5b4c5c;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -38px;
+}
+ul{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 60px;
+
+
+}
+li{
+    color: #6f6470;
+    position: relative;
+    left:25%;
+    width: 150px;
+    text-align: center;
+    line-height: 50px;
+    float: left;
+    list-style: none;
+    height: 50px;
+    font-size: 11px;
+    cursor: pointer;
+    font-weight:bold;
+
+}
+.li:after{
+    content: "";
+    display: block;
+    width:1px;
+    height: 15px;
+    background: #5b4c5c;
+    position: absolute;
+    bottom: 0;
+    left: 99%;
+    top:17px;
+    /*margin-left: -3px;*/
+}
+.protfolio img {
+    float: left;
+    display: inline-block;
+    vertical-align: middle;
+    border: 0;
+    width: 389px;
+
+
+}
+#big{
+    width: 1600px;
+    height: 990px;
+}
 
 
 
