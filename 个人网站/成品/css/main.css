@@ -259,7 +259,7 @@ header{
 	top:20px;
 	padding:0;
 	margin:
-	-webkit-border-radius:50%;
+	-webkit-border-radius:  50%;
 	-moz-border-radius:50%;
 	border-radius:50%;
 }
@@ -539,7 +539,7 @@ header{
 .expertiesdesc h4 {
 	font-size:14px;
 	font-weight:300;
-	color:#UIzards;
+	color:#000000;
 	line-height:normal;
 	text-transform:uppercase;
 	letter-spacing:2px;

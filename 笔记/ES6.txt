@@ -1,0 +1,338 @@
+ES6/es2015:  ECMA  javaScript
+
+变量提升：JavaScript 中，函数及变量的声明都将被提升到函数的最顶部。
+     JavaScript 中，变量可以在使用后声明，也就是变量可以先使用再声明。
+let:
+
+    1、let 定义变量 var有变量提升 let没有
+    2、  不允许重复定义
+         不允许重复声明
+    3、临时失效区（暂时性死区）：let作用域里面不允许其他的同名的变量进来 里面也不能出去
+    4、块级作用域  ｛｝就是一个块级
+    闭包：
+    一个外部函数，里面有一个内部函数 内部函数调用外部函数的局部变量
+    当外部函数执行完成后 局部变量不会被释放 内部函数可以一直用
+
+
+const:
+    定义常量
+    字母大写
+    提醒自己或别人别再给这个常量赋值
+    const声明常量后
+    改动会报错
+    定义对象后属性可以变
+    不想变就用object.freeze(OBJ)
+    不能提升
+    let的特性都有
+
+
+class:
+    class User{
+    constructor(){
+        this.aa='zs';
+    }
+    say(){
+        console.log(this.aa);
+    }
+
+    }
+    var u= new User();
+    u.say();
+
+    class Son extends User{
+        constructor(){
+            super();
+            this.bb='lisi';
+        }
+    }
+    var s = new Son;
+    s.say();
+
+    static
+    用来修饰方法，改变方法的生命周期
+
+
+
+set:
+    存储结构
+    var s = new Set()
+
+    s.add(1);
+    s.add(2);
+    不能存入重复值
+    s.delete(2);
+
+    console.log(s);
+    s.delete(1);
+    s.clear();
+    console.log(s.size);
+
+    数组去重
+    var arr = [1,2,2,3,5,3,2]
+    function fn(array){
+    ...
+
+
+
+    }
+    console.log(fn(arr));
+
+
+
+map:
+    存储键值对的数据结构
+    var m=new Map();
+    m.set('a',1);
+    m.set('b',2);
+    m.set(true,2);
+    m.set(null,2);
+    m.set(undefined,2);
+    m.set(NaN,2);
+    m.set({a:1},2);
+    m.set(1,2);
+
+    console.log(m.get('a'));
+    m.delete('a')
+    m.clear();
+
+arrow:  箭头函数 ()=>{}
+
+
+    只有一个参数时可以不写
+    var arr = [12,3,4];
+    arr.forEach(()=>{
+    console.log(1111);
+    })
+
+    扩展运算符
+    var fn = (...arg)=>{
+        console.log(arg)
+    }
+    fn(1,2,3,4);
+
+    匿名函数要用箭头函数改变this指向
+
+
+
+number:
+    Number.isNaN();
+            parseInt('第一个必须是数字')字符串转换成数字 整型
+            parseFloat()浮点型
+            isInteger()判断是否整型
+            Math.sign("12") //Number
+            Math.turnc("-12.01")  //Number
+            Math.floor("-12.01")  //Number
+
+
+array:
+    var a1=[3];
+    var a2=new array(3);
+    var a3=Array.of(3);
+
+    var arr = [1,2,3,4,5,6,7,8,9,0];
+    console.log(arr.copyWithin(2,4,7))
+    第一个参数：替换的起始位置
+    第二个参数：复制的开始位置；
+    第三个参数：复制的结束位置（不包括）；
+
+    var val = arr.find((value,index)=>{
+        return value > 5;
+    })//返回的永远是值，从前往后找第一个满足条件的值，
+
+
+obj:
+
+        Object.is();
+    //判断两个数是否相等
+    //    console.log(-0 == +0);
+    //    console.log(NaN == NaN);
+    //
+    //console.log(Object.is(1,1));
+    //console.log(Object.is(NaN,NaN));
+    //
+
+    //    Number.isNaN();
+
+    //    var arr = [1,2,3,5,NaN,6,7,8];
+    ////    console.log(arr.indexOf(NaN));
+    //
+    //    function hasNaN(array){
+    //        var flag = false;
+    //       array.forEach((value,index)=>{
+    //            if(Number.isNaN(value)){
+    //                flag = true;
+    //            }
+    //       })
+    //        return flag;
+    //    }
+    //    console.log(hasNaN(arr));
+
+
+        //$.extend();
+        //Object.assign
+    //
+    //    var obj = {a:1,b:2};
+    //
+    //    var o = {d:4}
+    //
+    //    Object.assign(obj,{e:o});
+    //
+    //    Object.freeze(obj.e);
+    //
+    //    o.d = 666;
+    //
+    //    console.log(obj);
+    //
+        //对象属性的简写
+    //    var name = 'lisi';
+    //    var str = 'name';
+    //    var nameaa = '22222'
+    //    var obj = {
+    //        [str+"aa"],
+    //        age:34
+    //    }
+    //
+    //    console.log(obj);
+
+    //    var obj = {
+    //        a:1,
+    //        b:2,
+    //        c:3
+    //    }
+
+    //    console.log(Object.entries(obj));
+    //    for(var p in obj )
+
+
+string:
+    includes();
+    var str = '宝宝心里苦';
+    console.log(str.includes('宝宝',2));从第二个往后找
+    console.log(str.startsWith('宝宝',2));从第二个往后找
+    console.log(str.endsWith('宝宝',2));从第二个往前找
+
+    console.log(str.repeat(3));把一个字符串重复三遍
+
+    模板字符串
+    var str = `ndaondoaindoansd
+    asdas
+    asdasd
+    asdl
+    oiandia`
+
+
+    var s = 'dfnonowefn'
+    var str = `<div></div>
+
+                <p>${s}</p>
+                `
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

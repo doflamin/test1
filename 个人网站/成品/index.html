@@ -1,41 +1,37 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<!-- Metas Page details-->
+<!-- Metas Page details 标签页释义-->
 <title>李铁铭的个人网站</title>
 <meta name="description" content="The percen description og LTM">
 <meta name="author" content="">
-<!-- Mobile Specific Metas-->
+<!-- Mobile Specific Metas 手机端兼容-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--main style-->
+<!--main style css引用文件地址-->
 <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
-<!--google font style-->
+<!--google font style 谷歌字体库-->
 <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
-<!--font-family: 'Metrophobic', serif;-->
+<!--font-family: 'Metrophobic', serif; 字体库引入地址-->
 <link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,400italic,600italic' rel='stylesheet' type='text/css'> 
 <!--font-family: 'Open Sans', sans-serif;-->
-<!-- font icon css style-->
+<!-- font icon css style 字体图标样式引入文件-->
 <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 
+
 <body onLoad="load()" onUnload="GUnload()">
-<!-- Preloader -->
+<!-- Preloader 预加载div-->
 <div id="preloader">
 	<div id="status"></div>
 </div>
-<!--wrapper start-->
+<!--wrapper start 包装器-->
 <div class="wrapper noGap" id="wrapper">
 
-<!--Header start -->
+<!--Header start  头部标签开始-->
 <header>
-  	<!--menu start-->
+  	<!--menu start 隐藏菜单-->
     <div class="menu">
     <a href="#" class="nav-icon" id="nav-show"><i class="fa fa-bars"></i></a>
       <div class="navbar-wrapper">
@@ -68,27 +64,27 @@
       </div>
     </div>
     <!--menu end--> 
-    <!--banner start-->
+    <!--banner start 开始图片-->
     <div class="banner row" id="banner">
     <div class="bannerText">
         <h1>HELLO,I'M TieMing Li</h1>
         <h3>Design &amp; Build Beautiful Crafted Web Experiences</h3>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 noPadd slides-container" style="height:100%"> 
-        <!--background slide show start-->
+        <!--background slide show start  背景图片切换开始-->
         <div class="slide"> 
           <img src="images/header-image/psb.jpg" alt="image01"> </div>
         <div class="slide"> 
           <img src="images/header-image/psb%20(1).jpg" alt="image01"> </div>
-        <!--background slide show end--> 
+        <!--background slide show end 背景图片切换结束-->
       </div>
     </div>
     <!--banner end--> 
     
   </header>
-  <!--Header end -->
+  <!--Header end 头部标签结束-->
   
- <!--about us start-->
+ <!--about me start 关于我的div-->
   <section class="aboutus" id="aboutus">
     <div class="container">
       <div class="row">
@@ -211,7 +207,6 @@ lum sapien sed matti sapien sed mattis.</p>
     </div>
   </section>
   <!--Work Experties end -->
-  <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >企业网站模板</a></div>
   <!--Education & diploma start -->
   <section id="education" class="educationdiploma">
   	<div class="container">
@@ -267,7 +262,7 @@ lum sapien sed matti sapien sed mattis.</p>
   <!--Education & diploma end -->
   
   
-  <!--portfolio start-->
+  <!--portfolio start 作品简介-->
 	<section class="protfolio" id="ourwork">
     <div class="container">
         <div class="heading">
@@ -378,28 +373,37 @@ lum sapien sed matti sapien sed mattis.</p>
         <li><a href="#"><i class="fa fa-dribbble fa-2x"></i></a></li>
       </ul>
     </div>
-    <p class="text-center">More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a><a href="#wrapper" class="gototop"><i class="fa fa-chevron-up fa-2"></i></a></p>
+    <p class="text-center"> -黑ICP备17007458- <a href="#wrapper" class="gototop"><i class="fa fa-chevron-up fa-2"></i></a></p>
   </section>
   <!--footer end-->     
   </div>
 <!--wrapper end--> 
 
 <!--modernizr js--> 
-<script type="text/javascript" src="js/modernizr.custom.26633.js"></script> 
+<script type="text/javascript" src="js/modernizr.custom.26633.js"></script>
+<!--Modernizr是一个检测用户浏览器HTML5和CSS3能力的JavaScript库。-->
+
 <!--jquary min js--> 
-<script type="text/javascript" src="js/jquery.min.js"></script> 
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!--bootstrap min js-->
 <script src="js/bootstrap.min.js"></script> 
 
-<!--for placeholder jquery--> 
+<!--for placeholder jquery 在HTML5中，想input文本框或是textarea文本域已经有了占位符功能，其属性名就是placeholder。-->
 <script type="text/javascript" src="js/jquery.placeholder.js"></script> 
 
-<!--for header jquery--> 
-<script type="text/javascript" src="js/stickUp.js"></script> 
+<!--for header jquery-->
+<!--粘贴是一个简单的 jQuery 插件，在页面滚动的时候固定一个元素到浏览器窗口的顶部，
+让其总是保持在视图中可见。这个插件作用于多页的网站，但是对于单页的布局有额外的功能。
+借助 CSS，还可以实现当前视图关联的导航菜单的高亮显示功能。-->
+<script type="text/javascript" src="js/stickUp.js"></script>
+<!--SuperSlide 是致力于实现网站统一特效调用的函数，
+能解决大部分标签切换、焦点图切换等效果，
+还能多个slide组合创造更多的效果-->
 <script src="js/jquery.superslides.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 jQuery(function($) {
 $(document).ready( function() {
-  //enabling stickUp on the '.navbar-wrapper' class
+  //enabling stickUp on the '.navbar-wrapper' class给.navbar-wrapper授权
 	$('.navbar-wrapper').stickUp({
 		parts: {
 		  0: 'banner',
