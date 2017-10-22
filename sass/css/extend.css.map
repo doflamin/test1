@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAoDA,EAAE;EACE,KAAK,EAAE,IAAc",
+"sources": ["../scss/extend.scss"],
+"names": [],
+"file": "extend.css"
+}

@@ -1,0 +1,22 @@
+// $aa:#aabbaa;
+// $test:".test";
+// $font:'font';
+
+// #{$test+ 1 }{
+//     #{$font+"-size"}:20px;
+// }
+// body{
+//     color: $aa;
+//     font-size: 12px;
+   
+// }
+@mixin test($f,$c){
+    font-size: $f;
+    color: $c;
+}
+body{
+    @include test($c:#ddd,$f:20px);
+}
+ul{
+    @include test(18px,#cccccc );
+}

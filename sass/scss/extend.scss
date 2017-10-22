@@ -1,0 +1,55 @@
+// @import "base";
+// div{
+//     color: #ffffff;
+//     font-size: 20px;
+//     a{
+//         text-decoration: none;
+//     }
+
+// }
+// p{
+//     @extend div;
+//     background: #e956dd1c;
+// }
+
+
+
+// $flag:false;
+// span{
+//     @if($flag){
+//         color: #ffffff;
+//     }@else{
+//         color: #000000;
+//     }
+// }
+
+// @for $i from 1 through 4{   // thiough ->to的话就不包括4
+//     .col-#{$i}{
+//         width: 20px * $i;
+//     }
+// }
+
+
+// $list : success,fail,warn;
+// @each $var in $list{
+//     .#{$var}{
+//         background-color: url($var + ".jpg");
+//     }
+    
+// }
+
+
+// $i:4;
+// @while $i>0{
+//     .col-#{$i}{
+//         width: 20px * $i;
+//     }
+//     $i: $i - 1;
+// }
+
+@function add ($a,$b){
+    @return $a + $b;
+}
+h1{
+    width: add(20px,50px);
+}
