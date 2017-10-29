@@ -1,35 +1,35 @@
-RequireJS ÊÇÒ»¸öJavaScriptÄ£¿é¼ÓÔØÆ÷¡£
-    RequireJSÓÐÁ½¸öÖ÷Òª·½·¨(method): define()ºÍrequire()¡£
-    ÕâÁ½¸ö·½·¨»ù±¾ÉÏÓµÓÐÏàÍ¬µÄ¶¨Òå(declaration) ²¢ÇÒËüÃÇ¶¼ÖªµÀÈçºÎ¼ÓÔØµÄÒÀÀµ¹ØÏµ£¬
-    È»ºóÖ´ÐÐÒ»¸ö»Øµ÷º¯Êý(callback function)¡£Óërequire()²»Í¬µÄÊÇ£¬
-    define()ÓÃÀ´´æ´¢´úÂë×÷ÎªÒ»¸öÒÑÃüÃûµÄÄ£¿é¡£
-    Òò´Ëdefine()µÄ»Øµ÷º¯ÊýÐèÒªÓÐÒ»¸ö·µ»ØÖµ×÷ÎªÕâ¸öÄ£¿é¶¨Òå¡£
-    ÕâÐ©ÀàËÆ±»¶¨ÒåµÄÄ£¿é½Ð×÷AMD (Asynchronous Module Definition£¬Òì²½Ä£¿é¶¨Òå)¡£
+ï»¿RequireJS æ˜¯ä¸€ä¸ªJavaScriptæ¨¡å—åŠ è½½å™¨ã€‚
+    RequireJSæœ‰ä¸¤ä¸ªä¸»è¦æ–¹æ³•(method): define()å’Œrequire()ã€‚
+    è¿™ä¸¤ä¸ªæ–¹æ³•åŸºæœ¬ä¸Šæ‹¥æœ‰ç›¸åŒçš„å®šä¹‰(declaration) å¹¶ä¸”å®ƒä»¬éƒ½çŸ¥é“å¦‚ä½•åŠ è½½çš„ä¾èµ–å…³ç³»ï¼Œ
+    ç„¶åŽæ‰§è¡Œä¸€ä¸ªå›žè°ƒå‡½æ•°(callback function)ã€‚ä¸Žrequire()ä¸åŒçš„æ˜¯ï¼Œ
+    define()ç”¨æ¥å­˜å‚¨ä»£ç ä½œä¸ºä¸€ä¸ªå·²å‘½åçš„æ¨¡å—ã€‚
+    å› æ­¤define()çš„å›žè°ƒå‡½æ•°éœ€è¦æœ‰ä¸€ä¸ªè¿”å›žå€¼ä½œä¸ºè¿™ä¸ªæ¨¡å—å®šä¹‰ã€‚
+    è¿™äº›ç±»ä¼¼è¢«å®šä¹‰çš„æ¨¡å—å«ä½œAMD (Asynchronous Module Definitionï¼Œå¼‚æ­¥æ¨¡å—å®šä¹‰)ã€‚
 
 
-requireÖ÷ÒªÊÇ½â¾ö
-Ä£¿é¼ÓÔØ
-½â¾öÎÄ¼þÖ®¼äµÄÒÀÀµ¼ÓÔØ
-ÅÐ¶ÏÊÇ²»ÊÇÒ»¸öÊý×é£º
+requireä¸»è¦æ˜¯è§£å†³
+æ¨¡å—åŠ è½½
+è§£å†³æ–‡ä»¶ä¹‹é—´çš„ä¾èµ–åŠ è½½
+åˆ¤æ–­æ˜¯ä¸æ˜¯ä¸€ä¸ªæ•°ç»„ï¼š
 1 arr.constructor == Array
 2 arr instanceof Array
 
 
-ÀàºÍ¶ÔÏó
-·½·¨ÊÇ¶¨ÒåÔÚÔ­ÐÍprototypeÀïÃæµÄ
-ÊôÐÔÊÇ¶¨ÒåÔÚ¹¹Ôìº¯ÊýÏÂÃæµÄ
+ç±»å’Œå¯¹è±¡
+æ–¹æ³•æ˜¯å®šä¹‰åœ¨åŽŸåž‹prototypeé‡Œé¢çš„
+å±žæ€§æ˜¯å®šä¹‰åœ¨æž„é€ å‡½æ•°ä¸‹é¢çš„
 
-¸Ä±äthisÖ¸Ïò£º
+æ”¹å˜thisæŒ‡å‘ï¼š
 call
-applyºóÃæÊÇÊý×é
-bindºÍcallÒ»Ñù£¬µ«ÊÇ²»»áÁ¢¼´Ö´ÐÐ
+applyåŽé¢æ˜¯æ•°ç»„
+bindå’Œcallä¸€æ ·ï¼Œä½†æ˜¯ä¸ä¼šç«‹å³æ‰§è¡Œ
 //        aa.call(obj, "lisi", 18);
 //        aa.apply(obj, ["lisi", 18]);
 //        aa.bind(obj)("lisi", 18);
 
-.bootstrapºÃ´¦£¿
-×ÔÊÊÓ¦ºÍÏìÓ¦Ê½²¼¾Ö£¬12Õ¤¸ñÏµÍ³£¬Í³Ò»µÄ½çÃæ·ç¸ñºÍcssÑùÊ½ÓÐÀûÓÚÍÅ¶Ó¿ª·¢
-¡£±àÐ´Áé»î¡¢ÎÈ¶¨¡¢¸ßÖÊÁ¿µÄ HTML ºÍ CSS ´úÂëµÄ¹æ·¶¡£
+.bootstrapå¥½å¤„ï¼Ÿ
+è‡ªé€‚åº”å’Œå“åº”å¼å¸ƒå±€ï¼Œ12æ …æ ¼ç³»ç»Ÿï¼Œç»Ÿä¸€çš„ç•Œé¢é£Žæ ¼å’Œcssæ ·å¼æœ‰åˆ©äºŽå›¢é˜Ÿå¼€å‘
+ã€‚ç¼–å†™çµæ´»ã€ç¨³å®šã€é«˜è´¨é‡çš„ HTML å’Œ CSS ä»£ç çš„è§„èŒƒã€‚
 
 
 

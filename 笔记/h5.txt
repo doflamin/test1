@@ -1,77 +1,77 @@
-ÓïÒå»¯±êÇ©£º
-1±ãÓÚ¿ª·¢ÕßÔÄ¶Á
-2±ãÓÚËÑË÷ÒýÇæÓÅ»¯
+ï»¿è¯­ä¹‰åŒ–æ ‡ç­¾ï¼š
+1ä¾¿äºŽå¼€å‘è€…é˜…è¯»
+2ä¾¿äºŽæœç´¢å¼•æ“Žä¼˜åŒ–
 
-ÍøÕ¾£ºÕ¾³¤Ö®¼Ò
-html5ÐÂ±êÇ©µÄÏÂÔØ
+ç½‘ç«™ï¼šç«™é•¿ä¹‹å®¶
+html5æ–°æ ‡ç­¾çš„ä¸‹è½½
  html5shiv.js
-cssÖØÖÃÍøÕ¾£ºNormalize.css
+cssé‡ç½®ç½‘ç«™ï¼šNormalize.css
 
-Ajax²»Ë¢ÐÂ½çÃæµÄÇëÇó
+Ajaxä¸åˆ·æ–°ç•Œé¢çš„è¯·æ±‚
 
-className·µ»ØµÄÊÇ×Ö·û´®
-classlist ·µ»ØµÄÊÇ¶ÔÏó
-toogleÇÐ»»
+classNameè¿”å›žçš„æ˜¯å­—ç¬¦ä¸²
+classlist è¿”å›žçš„æ˜¯å¯¹è±¡
+toogleåˆ‡æ¢
 
 
 
 JSON
-parse×Ö·û´®×ª»¯³É¶ÔÏó
-stringify¶ÔÏó×ª»¯Îª×Ö·û´®
+parseå­—ç¬¦ä¸²è½¬åŒ–æˆå¯¹è±¡
+stringifyå¯¹è±¡è½¬åŒ–ä¸ºå­—ç¬¦ä¸²
 
-JSONÖ»ÄÜ½âÎö·ûºÏJSON¸ñÊ½µÄ×Ö·û´®
-eval()½âÎöÈÎÒâ×Ö·û´® ²»°²È«µÄ
-Éî¿ËÂ¡ÓÐÁ½ÖÖ·½·¨
-Ò»ÖÖÊÇÀûÓÃµÝ¹é
-Ò»ÖÖÊÇÓÃJSON
-ÏÈ°Ñ¶ÔÏó×ª»¯³É×Ö·û´®
-ÔÙ°Ñ×Ö·û´®×ª»¯³É¶ÔÏó
+JSONåªèƒ½è§£æžç¬¦åˆJSONæ ¼å¼çš„å­—ç¬¦ä¸²
+eval()è§£æžä»»æ„å­—ç¬¦ä¸² ä¸å®‰å…¨çš„
+æ·±å…‹éš†æœ‰ä¸¤ç§æ–¹æ³•
+ä¸€ç§æ˜¯åˆ©ç”¨é€’å½’
+ä¸€ç§æ˜¯ç”¨JSON
+å…ˆæŠŠå¯¹è±¡è½¬åŒ–æˆå­—ç¬¦ä¸²
+å†æŠŠå­—ç¬¦ä¸²è½¬åŒ–æˆå¯¹è±¡
 
 
-JSONÔÚÏß½âÎö
-JSON¼æÈÝÐÔÎÊÌâ¿ÉÒÔÈ¥ÏÂÔØÒ»¸öJSON2µÄÎÄ¼þ½â¾ö
+JSONåœ¨çº¿è§£æž
+JSONå…¼å®¹æ€§é—®é¢˜å¯ä»¥åŽ»ä¸‹è½½ä¸€ä¸ªJSON2çš„æ–‡ä»¶è§£å†³
 
 
  var oDiv1 = document.getElementById("div1");
-        oDiv1.aa = "123";//Ïàµ±ÓÚjq prop()
+        oDiv1.aa = "123";//ç›¸å½“äºŽjq prop()
         console.log(oDiv1.aa);
 
-        oDiv1.setAttribute("bb", "234");//Ïàµ±ÓÚjq attr()
+        oDiv1.setAttribute("bb", "234");//ç›¸å½“äºŽjq attr()
         console.log(oDiv1.getAttribute("bb"));
-×Ô¶¨ÒåÊôÐÔÒ»°ãÒÔdata-¿ªÍ·
+è‡ªå®šä¹‰å±žæ€§ä¸€èˆ¬ä»¥data-å¼€å¤´
  console.log($("#div1").data("aaBb"));//aa-bb  aaBb
 
 
- webworker ²»ÄÜ½øÐÐdom²Ù×÷
-js¼ÓÔØÊÇµ¥Ïß³ÌµÄ
-defer½âÎöÍê³ÉÔÙÖ´ÐÐ£¬½âÎöºÍÍøÂçÏÂÔØÊÇÍ¬²½µÄ
-asyncÍøÂçÏÂÔØÍê³É¾ÍÁ¢¼´Ö´ÐÐ£¬½âÎöºÍÍøÂçÏÂÔØÊÇÍ¬²½µÄ
+ webworker ä¸èƒ½è¿›è¡Œdomæ“ä½œ
+jsåŠ è½½æ˜¯å•çº¿ç¨‹çš„
+deferè§£æžå®Œæˆå†æ‰§è¡Œï¼Œè§£æžå’Œç½‘ç»œä¸‹è½½æ˜¯åŒæ­¥çš„
+asyncç½‘ç»œä¸‹è½½å®Œæˆå°±ç«‹å³æ‰§è¡Œï¼Œè§£æžå’Œç½‘ç»œä¸‹è½½æ˜¯åŒæ­¥çš„
 
 
 
-ÏòÏÂÈ¡Õû floor
-ÏòÉÏÈ¡Õû celi
-localStorage·½·¨´æ´¢Ê±¼äÃ»ÓÐÏÞÖÆ
+å‘ä¸‹å–æ•´ floor
+å‘ä¸Šå–æ•´ celi
+localStorageæ–¹æ³•å­˜å‚¨æ—¶é—´æ²¡æœ‰é™åˆ¶
 
-canvas±êÇ©
-¿í¸ßÔÚÄÚÁªÀïÉèÖÃ
+canvasæ ‡ç­¾
+å®½é«˜åœ¨å†…è”é‡Œè®¾ç½®
 
-scriptÉèÖÃ
-ÒªÏÈ»ñÈ¡ÉÏÏÂÎÄ
+scriptè®¾ç½®
+è¦å…ˆèŽ·å–ä¸Šä¸‹æ–‡
 .getContext("2d")
-.beginPath();¿ªÊ¼»­
-.moveto£¨100px¡£200px£©Êó±êÂäµã
-.lineto£¨£©Êó±ê»­µ½ÄÄÀï
-.strokeÉèÖÃÑÕÉ«Ãè±ß
+.beginPath();å¼€å§‹ç”»
+.movetoï¼ˆ100pxã€‚200pxï¼‰é¼ æ ‡è½ç‚¹
+.linetoï¼ˆï¼‰é¼ æ ‡ç”»åˆ°å“ªé‡Œ
+.strokeè®¾ç½®é¢œè‰²æè¾¹
 .strokeStyle =""
-.lineWidthÏßµÄ¿í¶È
-.lineCap = ¡°round¡±ÉèÖÃ¶ËµãÑùÊ½
+.lineWidthçº¿çš„å®½åº¦
+.lineCap = â€œroundâ€è®¾ç½®ç«¯ç‚¹æ ·å¼
 
-Ô²»¡
-Èç¹ûÊÇÔ²
-xy¶ÔÓ¦µÄÊÇÔ²ÐÄÎ»ÖÃ
-Èç¹ûÊÇÍÖÔ²¾ÍÊÇÇÐÏßµÄ½»µã
-Ä£°æ¿âecharts
+åœ†å¼§
+å¦‚æžœæ˜¯åœ†
+xyå¯¹åº”çš„æ˜¯åœ†å¿ƒä½ç½®
+å¦‚æžœæ˜¯æ¤­åœ†å°±æ˜¯åˆ‡çº¿çš„äº¤ç‚¹
+æ¨¡ç‰ˆåº“echarts
 
 
 

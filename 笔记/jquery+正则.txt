@@ -1,173 +1,173 @@
-���ֶ���
-1�����ö���
-2���Զ������
-3��DOM����
+﻿三种对象：
+1：内置对象
+2：自定义对象
+3：DOM对象
 
-��ȡDOM����ķ���
-1��docuemt.getElementById();
+获取DOM对象的方法
+1：docuemt.getElementById();
 2: context.getElementsByTagName()
 3: conText.getElementsByClassName();
 4: context,getElementByName();
-5: document,querySelector(Selector); ���ص�һ��Ԫ��  ES5
-6��document,querySelectorAll(Selector) ����һ������   ES5
+5: document,querySelector(Selector); 返回第一个元素  ES5
+6：document,querySelectorAll(Selector) 返回一个数组   ES5
 
-DOM������
+DOM操作：
 
-1��Ԫ�ز���;
-2��Ԫ�ر���;
-3��Ԫ�صĲ���
-
-
-Jq�� attr �� prop ��ʲô����
-
-����HTMLԪ�ر����ʹ��еĹ������ԣ��ڴ���ʱ��ʹ��prop������
-����HTMLԪ�������Լ��Զ����DOM���ԣ��ڴ���ʱ��ʹ��attr������
+1：元素查找;
+2：元素遍历;
+3：元素的操纵
 
 
-��������������������
+Jq中 attr 和 prop 有什么区别
 
-����Զ��󣬰�һ������������,�����Ͼ��ǰ�һ������ľ�̬�����Ͷ�̬������������Ժͷ���,
-Ҳ���ǰ�һ��������㷨�����ݽṹ��װ��һ����֮��,
-������Ƕ������ͻ���֮���ͨ����ɵ�.
-
-���������з�װ��,�̳���,��̬�ԡ�
-��װ:�����˶����ڲ�����Ҫ��¶��ϸ��,ʹ���ڲ�ϸ�ڵı䶯���������,ֻ�����ӿڽ���ͨ��.
-��װ�Խ����˱�̵ĸ�����. ͨ���̳�,ʹ���½�һ����������,
-һ��������������������˽�еķ����͹������Եķ������������˱�����.
-���̳к�ʵ�ֽӿں�����ʱ�����Ͱ󶨻��� �������Ķ�̬,ʹ�ò�ͬ�����������Ķ����ܹ�����ͬ����Ϣ������ͬ�ķ�Ӧ,
-���������˴����ͨ����.
-
-��֮,����������������˴��ͳ���������ԺͿ�ά����.
+对于HTML元素本身就带有的固有属性，在处理时，使用prop方法。
+对于HTML元素我们自己自定义的DOM属性，在处理时，使用attr方法。
 
 
-this��ʲô �ڲ�ͬ�����зֱ����ʲô
+简述下你理解的面向对象？
 
-��1��function a(){ this ?} //This:ָ��windows
+万物皆对象，把一个对象抽象成类,具体上就是把一个对象的静态特征和动态特征抽象成属性和方法,
+也就是把一类事物的算法和数据结构封装在一个类之中,
+程序就是多个对象和互相之间的通信组成的.
 
-��2��function b(){ return function(){ this ?}}b()(); //This:ָ��windows
+面向对象具有封装性,继承性,多态性。
+封装:隐蔽了对象内部不需要暴露的细节,使得内部细节的变动跟外界脱离,只依靠接口进行通信.
+封装性降低了编程的复杂性. 通过继承,使得新建一个类变得容易,
+一个类从派生类那里获得其非私有的方法和公用属性的繁琐工作交给了编译器.
+而继承和实现接口和运行时的类型绑定机制 所产生的多态,使得不同的类所产生的对象能够对相同的消息作出不同的反应,
+极大地提高了代码的通用性.
 
-��3��function c(){ return {s:function(){this}}}c().s(); //This:ָ��object
-
-�����������ڰ󶨵����ԣ�
-JavaScript �е� this ����Ҫ�ḻ�ö࣬
-��������ȫ�ֶ��󡢵�ǰ������������������ȫȡ���ں����ĵ��÷�ʽ��
+总之,面向对象的特性提高了大型程序的重用性和可维护性.
 
 
-��jq�� mouseover mouseenter mouseout mouseleave �� hover��ʲô����?
-mouseenter��mouseover��
-�������ָ�봩����ѡ��Ԫ�ػ�����Ԫ�أ����ᴥ��mouseover�¼���
-ֻ�������ָ�봩����ѡԪ��ʱ���Żᴥ��mouseentr�¼���
-mouseout��mouseleave��
-��������뿪��ѡԪ�ػ����κ���Ԫ�أ����ᴥ��mouseout�¼���
-ֻ�������ָ���뿪��ѡԪ��ʱ���Żᴥ��mouseleave�¼���
+this是什么 在不同场景中分别代表什么
+
+（1）function a(){ this ?} //This:指向windows
+
+（2）function b(){ return function(){ this ?}}b()(); //This:指向windows
+
+（3）function c(){ return {s:function(){this}}}c().s(); //This:指向object
+
+由于其运行期绑定的特性，
+JavaScript 中的 this 含义要丰富得多，
+它可以是全局对象、当前对象或者任意对象，这完全取决于函数的调用方式。
+
+
+在jq中 mouseover mouseenter mouseout mouseleave 和 hover有什么关联?
+mouseenter与mouseover：
+不论鼠标指针穿过被选中元素或其子元素，都会触发mouseover事件。
+只有在鼠标指针穿过被选元素时，才会触发mouseentr事件。
+mouseout与mouseleave：
+不论鼠标离开被选元素还是任何子元素，都会触发mouseout事件。
+只有在鼠标指针离开被选元素时，才会触发mouseleave事件。
 hover:
-hover��һ�����Ϸ������൱��mouseenter+mouseleave��
+hover是一个符合方法，相当于mouseenter+mouseleave。
 
-ͬ���첽?
-1��  ����ͬ���������ڷ���һ�����ܵ���ʱ����û�еõ����֮ǰ���õ��þͲ����ء�
-    Ҳ���Ǳ���һ��һ������,��ǰһ�������˲�������һ����
-2��  �첽�ĸ����ͬ����ԡ���һ���첽���̵��÷����󣬵����߲������̵õ������
-    ʵ�ʴ���������õĲ�������ɺ�ͨ��״̬��֪ͨ�ͻص���֪ͨ�����ߡ�
+同步异步?
+1、  进程同步：就是在发出一个功能调用时，在没有得到结果之前，该调用就不返回。
+    也就是必须一件一件事做,等前一件做完了才能做下一件事
+2、  异步的概念和同步相对。当一个异步过程调用发出后，调用者不能立刻得到结果。
+    实际处理这个调用的部件在完成后，通过状态、通知和回调来通知调用者。
 
 
 65.promise
-    Promise�Ĺ��캯������һ���������Ǻ��������Ҵ�������������resolve��reject��
-    �ֱ��ʾ�첽����ִ�гɹ���Ļص��������첽����ִ��ʧ�ܺ�Ļص�������
+    Promise的构造函数接收一个参数，是函数，并且传入两个参数：resolve，reject，
+    分别表示异步操作执行成功后的回调函数和异步操作执行失败后的回调函数。
 
-����
+正则：
 RegExp:regular Expression
-����һ����������ַ���ƥ��
+按照一定规则进行字符串匹配
 
-ֱ������var reg = /xxx/�������ʽ
+直接量：var reg = /xxx/正则表达式
 
 var reg = new RegExp('xxx')
-/c{3,4}/ ��������С���Ĵ�
-/c{2}/  cƥ������
-/c{n��}/  cƥ�����n��������
-�ɹ�����c��ʧ�ܷ���null
+/c{3,4}/ 大于三次小于四次
+/c{2}/  c匹配两次
+/c{n，}/  c匹配大于n次无上限
+成功返回c，失败返回null
 
-*��ʾ0�λ��߶��
-+��ʾ1�λ��߶��
-����ʾ0�λ���1��
-c* �� c{0,}һ����˼
-c+ �� c{1,}һ����˼
-c�� �� c{0��1}һ����˼
-*�� 0��
+*表示0次或者多次
++表示1次或者多次
+？表示0次或者1次
+c* 和 c{0,}一个意思
+c+ 和 c{1,}一个意思
+c？ 和 c{0，1}一个意思
+*？ 0次
 
 
 
-/^��ͷ����β$/
+/^开头，结尾$/
 /,/
-/|/ƥ�����
+/|/匹配或者
 
 
 
-�ࣺ������ͬ�����Ժͷ����Ķ���ļ���
-��ʱҲ�й��캯��
-����һ����������ĸ��дһ�㶼����
-new����
+类：具有相同的属性和方法的对象的集合
+有时也叫构造函数
+定义一个函数首字母大写一般都是类
+new是类
 function
-prototype(ģ��)ԭ��
+prototype(模子)原型
 Cat.prototype.eat = function(){}
-����һ��������ʱ�� �����Է��ڹ��캯�����������ԭ����
-���ú���ʱ���Ȳ��ҹ��캯�����ٲ���ԭ�ͣ��ٲ��Ҹ���֪��obj
+定义一个函数的时候 将属性放在构造函数里，方法放在原型中
+调用函数时，先查找构造函数，再查找原型，再查找父类知道obj
 
 
-��ʽ������
+链式操作：
 $('.aa').mouseover(function(){}).mouseout(function(){})
 
-ԭ������ -> jq���� $()
-jq���� -> ԭ������[0] .get(0)
+原生对象 -> jq对象 $()
+jq对象 -> 原生对象[0] .get(0)
 
 
 
-�ĵ�����������$(function(){});
-*ѡ������Ԫ��
-������ѡ����
->���Ӵ�
-�ո� ���
-+��һ���ֵ�
-~�������е��ֵ�
-��eq ��n�����ӣ�$("#uli1 li:eq(0)").css("background"."red");
-:evenż��ѡ����
-:odd����ѡ����
-:first��һ��li
-:last���һ��
-:gt�����½Ǳ�
-:ltС���½Ǳ�
-:not����ѡ����(������ѡ����)
+文档就绪函数：$(function(){});
+*选中所有元素
+，分组选择器
+>亲子代
+空格 后代
++下一个兄弟
+~后面所有的兄弟
+：eq 第n个儿子：$("#uli1 li:eq(0)").css("background"."red");
+:even偶数选择器
+:odd奇数选择器
+:first第一个li
+:last最后一个
+:gt大于下角标
+:lt小于下角标
+:not过滤选择器(参数是选择器)
 :target
 <a href="#div1">xxx</a>
 #div3:target{
 bg:#ccc
 }
-:contains ����ѡ������
+:contains 内容选择器：
 
-:has ����ѡ����
-:empty ��ѡ����
-����������Ⱦ��
-��hiddenѡ�����в��ɼ���Ԫ��
-��visibleѡ��ɼ���
-��Ԫ��ѡ������
-nth-child��2n��:�ڼ������ӣ���������ʽ��1��ʼ��,����n��0��ʼ����
+:has 包含选择器
+:empty 空选择器
+看到的是渲染树
+：hidden选择所有不可见的元素
+：visible选择可见的
+子元素选择器：
+nth-child（2n）:第几个孩子（整个表达式从1开始数,但是n从0开始数）
 
-��ѡ�� radio
-��ѡ�� checkbox
+单选框 radio
+复选框 checkbox
 
-js��font-size����ôд��Ҫд��fontSize
+js中font-size不这么写，要写成fontSize
 
 
 
-hasclass���ص���true����false
-width:���ݵĿ���
-innerwidth():���ݺ�padding�Ŀ���
-outerwidth()�����ݺ�padding��boder�Ŀ��� ������д��true�Ļ��ͻ����margin�Ŀ���
-д�������Ǹ�ֵ
-��д���Ƕ�ȡ
-offset������ĵ�����
-position���������������Ѿ���λ������Ԫ��
+hasclass返回的是true或者false
+width:内容的宽度
+innerwidth():内容和padding的宽度
+outerwidth()：内容和padding和boder的宽度 括号里写上true的话就会加上margin的宽度
+写参数就是赋值
+不写就是读取
+offset相对于文档距离
+position相对于离他最近的已经定位的祖先元素
 
-appendTo ����Ԫ��׷�ӵ���Ԫ����
+appendTo 把子元素追加到父元素上
 
 
 

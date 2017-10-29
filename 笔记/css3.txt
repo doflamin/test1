@@ -1,64 +1,64 @@
-normoal
-cssÊôĞÔÒªĞ´Îå¸ö
+ï»¿normoal
+csså±æ€§è¦å†™äº”ä¸ª
 -webkit-           chrome safari
 -moz-             firefox
 -o-               opera
 -ms-                 IE
-Ê²Ã´Ò²²»Ğ´
+ä»€ä¹ˆä¹Ÿä¸å†™
 
 
-ÅĞ¶Ï¼æÈİĞÔµÄÍøÕ¾£º
+åˆ¤æ–­å…¼å®¹æ€§çš„ç½‘ç«™ï¼š
 www.caniues.com
 
 
 
 
 
-ÎÄµµ³¬³ö...Èı¸öÊôĞÔ
-           £û
-                        white-space: nowrap;²»»»ĞĞ
-                        overflow: hidden;Òç³öÒş²Ø
-                        text-overflow: ellipsis;ÎÄµµÒç³öÈ¡Ê¡ÂÔºÅ
-£ı
-            display: flex;µ¯ĞÔºĞÄ£ĞÍ
-            flex-grow: 1;·Ö³ÉÒ»·İ
+æ–‡æ¡£è¶…å‡º...ä¸‰ä¸ªå±æ€§
+           ï½›
+                        white-space: nowrap;ä¸æ¢è¡Œ
+                        overflow: hidden;æº¢å‡ºéšè—
+                        text-overflow: ellipsis;æ–‡æ¡£æº¢å‡ºå–çœç•¥å·
+ï½
+            display: flex;å¼¹æ€§ç›’æ¨¡å‹
+            flex-grow: 1;åˆ†æˆä¸€ä»½
 
-Ç¿ÖÆ»»ĞĞword-break:break-all
-
-
-overflow: scroll;Òş²ØÒç³öÈİÆ÷µÄÄÚÈİ£¬Òç³öµÄÄÚÈİ½«ÒÔ¾í¶¯¹ö¶¯ÌõµÄ·½Ê½³ÊÏÖ¡£
-
-box-shadow ºĞ×ÓÒõÓ° 5px 5px 5px rgba(50, 50, 50, .4);
-                    Ë®Æ½ ´¹Ö± Ä£ºı ÑÕÉ«
+å¼ºåˆ¶æ¢è¡Œword-break:break-all
 
 
+overflow: scroll;éšè—æº¢å‡ºå®¹å™¨çš„å†…å®¹ï¼Œæº¢å‡ºçš„å†…å®¹å°†ä»¥å·åŠ¨æ»šåŠ¨æ¡çš„æ–¹å¼å‘ˆç°ã€‚
 
-w3c±ê×¼ºĞÄ£ĞÍ£º¿í¸ßµÈÓÚÄÚÈİµÄ¿í¸ß
-
-¹ÖÒìÄ£Ê½ÏÂÊÇÄÚÈİ¼Ópadding¼Óborder
+box-shadow ç›’å­é˜´å½± 5px 5px 5px rgba(50, 50, 50, .4);
+                    æ°´å¹³ å‚ç›´ æ¨¡ç³Š é¢œè‰²
 
 
 
+w3cæ ‡å‡†ç›’æ¨¡å‹ï¼šå®½é«˜ç­‰äºå†…å®¹çš„å®½é«˜
 
-                    ±äĞÎ
-transform£ºrotate£¨30deg£©Ë³Ê±Õë30¶È
-transform: scale(1.2) ·Å´ó1.2±¶
-transform-origin: 100px 50px;ÒÔË­ÎªÔ²ĞÄĞı×ª
-transform: translate(100px, 100px) Ë®Æ½´¹Ö±ÒÆ¶¯¾àÀë
+æ€ªå¼‚æ¨¡å¼ä¸‹æ˜¯å†…å®¹åŠ paddingåŠ border
 
-¹ı¶É
+
+
+
+                    å˜å½¢
+transformï¼šrotateï¼ˆ30degï¼‰é¡ºæ—¶é’ˆ30åº¦
+transform: scale(1.2) æ”¾å¤§1.2å€
+transform-origin: 100px 50px;ä»¥è°ä¸ºåœ†å¿ƒæ—‹è½¬
+transform: translate(100px, 100px) æ°´å¹³å‚ç›´ç§»åŠ¨è·ç¦»
+
+è¿‡æ¸¡
 
 transition: all     1s      ease;
-            ËùÓĞµÄ  Ã¿Ò»Ãë  ¶¯»­Ğ§¹û
+            æ‰€æœ‰çš„  æ¯ä¸€ç§’  åŠ¨ç”»æ•ˆæœ
 
 
 
 
-ÊÓ½Ç£º
+è§†è§’ï¼š
 perspective: xxxxpx
-ÊÓ½ÇÔ­µã
-perspective-origin£º50% 50%:
-±£³Ö3D
+è§†è§’åŸç‚¹
+perspective-originï¼š50% 50%:
+ä¿æŒ3D
 transform-style:preserve-3d
 
 
