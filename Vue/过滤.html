@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        #app {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        li {
+            /* list-style: none; */
+            height: 30px;
+            margin: 10px;
+            padding: 10px;
+            line-height: 30px;
+
+        }
+
+
+
+        .red {
+            background: #ff0000;
+        }
+
+        .green {
+            background: #00ff00;
+        }
+
+        button {
+            width: 30px;
+            height: 20px;
+            background: #cccccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model='msg' @keyup="search()">
+        <button @click='add'>提交</button>
+        <ul>
+            <li v-for='val in showArr' :class='{red:val.active}' @click="val.active = !val.active">
+                {{val.name}}</li>
+        </ul>
+    </div>
+
+    <script src="vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                msg: '',
+                arr: [],
+                showArr: []
+
+
+            },
+            methods: {
+                add: function (msg) {
+                    this.arr.push({ name: this.msg, active: false });
+                    this.msg = '';
+                    this.arr.sort((a, b) => {
+                        return a.name > b.name;
+                    });
+                    this.showArr = this.arr;
+
+                },
+                search: function () {
+                    var filterArr = this.arr.filter((val) => {
+                        return val.name.includes(this.msg);
+                    });
+                    this.showAFFrr = filterArr;
+
+                }
+
+
+
+            }
+
+        });
+
+
+
+    </script>
+</body>
+
+</html>

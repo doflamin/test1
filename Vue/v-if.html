@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+
+
+        <h1 v-if="flag == 1">hhhhhhhhhhhh</h1>
+        <span v-else-if="flag == 2">sssssssss</span>       
+        <p v-else>ppppppppp</p>
+        <!-- 一大块代码段或者不用切换时用if 会注释掉 template只能用于if语法 -->
+
+
+        <h2 v-show=""></h2> 
+        <!-- 频繁切换显示隐藏时用show,会存在结构，只不过是displaynone -->
+    </div>
+   <script src="vue.js"></script> 
+   <script>
+   var vm = new Vue({
+    el:"#app",
+    data:{
+        flag:true
+    }
+
+
+   })
+   
+   </script> 
+   
+</body>
+</html>

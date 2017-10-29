@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* .isDis {
+            background: #ff0000;
+            font-size: 40px;
+            width: 200px;
+            height: 200px;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- 绑定属性 -->
+    <div id="app">
+
+        <!-- <p :id="p" :text="pp">ppppppp</p>
+        <p class: 'aaa' :class="[classA,classB]">pppppppppp</p> -->
+        <button @click="fn">22222</button>
+        <div :style="[styleA,dis]"></div>
+    </div>
+
+
+
+
+    <script src="vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',//必须的
+            data: {
+                styleA: {
+                    background: 'red',
+                    height: '200px',
+                    width: '200px'
+                },
+
+                dis: {
+                    display: 'none'
+                }
+            },
+            methods: {
+                fn: function () {
+
+                    if (this.dis == null) {
+                        this.dis = {
+                            display: 'none'
+                        };
+
+                    } else {
+                        this.dis = null;
+                    }
+
+
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>

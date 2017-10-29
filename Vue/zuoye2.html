@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        #app {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        li {
+            list-style: none;
+            height: 30px;
+            margin: 10px;
+            padding: 10px;
+            line-height: 30px;
+
+        }
+
+        span {
+            float: right;
+        }
+
+        .red {
+            background: #ff0000;
+        }
+
+        .green {
+            background: #00ff00;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+
+            <li v-for='(obj,index) in arr' @click="obj.active = !obj.active" :class="{red:obj.active,green:!obj.active}">
+                {{obj.name}}
+                <span v-text="obj.prince"></span>
+            </li>
+
+
+        </ul>
+        <hr> total:
+        <span>{{total()}}</span>
+    </div>
+
+    <script src="vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                arr: [
+                    { name: 'aaa', prince: 616, active: false },
+                    { name: 'bbb', prince: 476, active: false },
+                    { name: 'ccc', prince: 244, active: false },
+                    { name: 'ddd', prince: 522, active: false },
+                    { name: 'eee', prince: 452, active: false }
+                ]
+
+            },
+            methods: {
+                total() {
+                    let num = 0;
+                    this.arr.forEach(function (val, index) {
+                        if (val.active) {
+                            num += val.prince;
+
+                        }
+                    })
+                    return num;
+                }
+            }
+
+        })
+
+
+
+    </script>
+</body>
+
+</html>

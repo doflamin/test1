@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        
+
+        .class {
+            background: green;
+            height: 20px;
+            width: 100px;
+            list-style:none;
+            margin:0 auto;
+            margin-bottom:10px;
+        }
+        .red {
+            background: #ff0000;
+            height: 20px;
+            width: 100px;
+            list-style:none;
+            margin:0 auto;
+            margin-bottom:10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <template v-for="n in 5">
+                <li class='class' @click="changecolor(n)">{{n}}</li>
+            </template>
+            <hr>
+            <li class='class' >{{total}}</li>
+        </ul>
+
+
+    </div>
+    <script src="vue.js"></script>
+    <script>
+
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                // styleA: {
+                //     background: 'green',
+                //     height: '20px',
+                //     width: '100px',
+                //     'list-style': 'none',
+                //     margin: '0 auto',
+                //     'margin-bottom': '10px'
+
+
+
+                // },
+                total: 0
+
+
+            },
+            methods: {
+                changecolor: function (n) {
+                    if(event.target.className !== "red"){
+                        event.target.className = "red"
+                        this.total+=n;
+                    }else{
+                        event.target.className = "class"
+                        this.total-=n;
+                    }
+
+                    
+                    // if (this.styleA.background == 'red') {
+                    //     this.styleA = {
+                    //         background: 'green',
+                    //         height: '20px',
+                    //         width: '100px',
+                    //         'list-style': 'none',
+                    //         margin: '0 auto',
+                    //         'margin-bottom': '10px'
+                    //     }
+                    // } else (
+                    //     this.styleA = {
+                    //         background: 'red',
+                    //         height: '20px',
+                    //         width: '100px',
+                    //         'list-style': 'none',
+                    //         margin: '0 auto',
+                    //         'margin-bottom': '10px'
+                    //     }
+                    // )
+
+                }
+
+
+            }
+        })
+
+
+
+    </script>
+</body>
+
+</html>
