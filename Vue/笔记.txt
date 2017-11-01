@@ -1,0 +1,103 @@
+vue的形式是：
+new Vue({
+    el:"#app",
+    data:{
+        ...
+    },
+    methods{
+        ...
+    },
+    computed:{
+
+    },
+    ...
+})
+要用到vue的东西外面需要套上一个id为app的标签
+控制台里面想要双向绑定的话需要在new Vue前面加上var vm
+想要得到el或data元素的话前面要加$
+也就是vm.$el &  vm.$data
+
+v-model:input标签里面的值会用到这个
+v-text:标签里面的内容会引入
+v-html：同上，区别在于可以解析vue里面的标签
+
+双向绑定重点：
+ 访问器属性
+    Object.defineProperty(obj,'name',{
+        set:function(val){
+            console.log(val);
+        }，
+        get:function(){
+
+        }
+
+    })
+
+v-on: 可以用@来进行省略 例如        <button @click="fn(1,2)">click</button>
+函数的定义要写在methods方法里面 参数可以传 也可以不传 不传的话有一个event自带参数
+
+v-bind：用来绑定属性 例如        <div :class="[classA,classB]"></div>
+但是有两个特殊的东西 一个是class
+ 另一个是style 
+ 它们分别有三种不同的绑定方式
+        <div :class="{red:isRed,font:isFont}">ddddddddddd</div>  定义对象 data里面要写  isRed:false,              true时生效
+                                                                                        isFont:true,
+
+
+        <div :class="classObj">ddddddddddd</div>                     classObj:{
+                                                                                    red:true,
+                                                                                    font:false
+                                                                                }
+
+
+        <div :class="[classA,classB]">ddddddddddd</div>                     classA:'red',
+                                                                             classB:'font'
+
+
+
+
+
+
+
+
+        <div :style="{background:bgStyle}">dddddd</div>               bgStyle:"red"
+
+        <div :style="styleObj">dddddd</div>                        styleObj:{
+                                                                                background:'red',
+                                                                                "font-size":'40px'
+                                                                            },
+
+        <div :style="[styleA,styleB]">dddddd</div>                 styleA:{
+                                                                                background:'red',
+                                                                                color:'green'
+                                                                            },
+                                                                            styleB:{
+                                                                                "font-size":'40px'
+                                                                            },
+
+
+
+
+
+
+
+
+v-for:      <li v-for='(val,index) in arr'>
+                {{val}},{{index+1}}
+                <a href=""> {{val}}</a>
+            </li> 
+data里面要写arr:[1,2,3]
+
+还有一种是直接循环，in几次就循环几次 下面这个标签有“不会显示在dom结构里，但是可以起到循环里面的结构的作用”；   
+             <template v-for="n in 3">
+                    <p>pppppp</p>
+                    <h1>hhhhhhhhhh</h1>
+                    <span>ssssssssss</span>
+            </template>
+
+  
+
+            
+
+
+
