@@ -1,118 +1,234 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-    <meta name="keywords" content="�ٶȵ�ͼ,�ٶȵ�ͼAPI���ٶȵ�ͼ�Զ��幤�ߣ��ٶȵ�ͼ���������ù���" />
-    <meta name="description" content="�ٶȵ�ͼAPI�Զ����ͼ�������û��ڿ��ӻ����������ɰٶȵ�ͼ" />
-    <title>�ٶȵ�ͼAPI�Զ����ͼ</title>
-    <!--���ðٶȵ�ͼAPI-->
-    <style type="text/css">
-        html,body{margin:0;padding:0;}
-        .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
-        .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* p:nth-child(1){
+        width: 200px;
+        height: 200px;
+        background: #00ff00;
+
+    }
+    p:nth-child(2){
+        width: 200px;
+        height: 200px;
+        background: #ff0000;
+
+    }
+    p:nth-child(3){
+        width: 200px;
+        height: 200px;
+        background: #0000ff;
+
+    }
+    p:nth-child(4){
+        width: 200px;
+        height: 200px;
+        background: #000000;
+
+    }  */
+        /* p:first-child{
+        width: 200px;
+        height: 200px;
+        background: #ff0000;
+            }  */
+        /* 8题 */
+        /* #div1{
+        width: 0px;
+        height: 0px;
+        border-bottom: 100px solid #f00;
+        border-left: 200px solid #f00;
+
+        border-top: 100px solid #f00;
+
+        border-right: 100px solid #ff0;
+        
+    } */
+        /* .outer{
+        width: 200px;
+        height: 100px;
+    }
+    .inner{
+        width: 150px;
+        height: 80px;
+        padding-top: 50%;
+    } */
+        /* div{
+        width: 100px;
+        height: 100px;
+    }
+    .top{
+        margin: 50px 0;
+    }
+    .bottom{
+        margin: 20px 0;
+    } */
+        /* .box{
+        width:200px;
+        padding:50px;
+        border:1px solid #000;
+        box-sizing:border-box;
+    } */
     </style>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
 </head>
 
 <body>
-<!--�ٶȵ�ͼ����-->  
-<div style="width:697px;height:250px;border:#ccc solid 1px;" id="dituContent"></div>
-</body>
-<script type="text/javascript">
-    //�����ͳ�ʼ����ͼ������
-    function initMap(){
-        createMap();//������ͼ
-        setMapEvent();//���õ�ͼ�¼�
-        addMapControl();//���ͼ��ӿؼ�
-        addMarker();//���ͼ�����marker
-    }
+    <!-- <div class="top"></div>
+    <div class="bottom"></div> -->
+    <!-- <div id="div1">
+    </div>
+    <p></p>
+    <p></p>
+    <p></p> -->
+    <!-- <div class="outer">
+        <div class="inner"></div>
+    </div>  -->
+    <!-- <div class="box"></div> -->
+    <script>
+        // var a,b,c;
+        // a = b = c = [1,2];
+        // b=[3,4];
+        // c.length=1;
+        // console.log(a);
 
-    //������ͼ������
-    function createMap(){
-        var map = new BMap.Map("dituContent");//�ڰٶȵ�ͼ�����д���һ����ͼ
-        var point = new BMap.Point(126.635823,45.713333);//����һ�����ĵ�����
-        map.centerAndZoom(point,17);//�趨��ͼ�����ĵ�����겢����ͼ��ʾ�ڵ�ͼ������
-        window.map = map;//��map�����洢��ȫ��
-    }
+        // function Animal(name) {
+        //     this.name = name;
+        // }
+        // Animal.prototype = {
+        //     getName: function () {
+        //         return this.name;
+        //     }
+        // }
+        // var myDog = new Animal('dog');
+        // var getName = myDog.getName;
+        // console.log(getName('cat'));
+        // getName('cat');
 
-    //��ͼ�¼����ú�����
-    function setMapEvent(){
-        map.enableDragging();//���õ�ͼ��ק�¼���Ĭ������(�ɲ�д)
-        map.enableScrollWheelZoom();//���õ�ͼ���ַŴ���С
-        map.enableDoubleClickZoom();//�������˫���Ŵ�Ĭ������(�ɲ�д)
-        map.enableKeyboard();//���ü����������Ҽ��ƶ���ͼ
-    }
 
-    //��ͼ�ؼ���Ӻ�����
-    function addMapControl(){
-        //���ͼ��������ſؼ�
-        var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
-        map.addControl(ctrl_nav);
-        //���ͼ���������ͼ�ؼ�
-        var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
-        map.addControl(ctrl_ove);
-        //���ͼ����ӱ����߿ؼ�
-        var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
-        map.addControl(ctrl_sca);
-    }
+        // const a=[];
+        // for(let i=0;i<10;i++){
+        //     a[i]=function(){
+        //         console.log(i);
+        //     };
+        // }
+        // a[1]();
 
-    //��ע������
-    var markerArr = [{title:"�ҵ�λ��",content:"�ҵ�λ��",point:"126.636119|45.712842",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
-    ];
-    //����marker
-    function addMarker(){
-        for(var i=0;i<markerArr.length;i++){
-            var json = markerArr[i];
-            var p0 = json.point.split("|")[0];
-            var p1 = json.point.split("|")[1];
-            var point = new BMap.Point(p0,p1);
-            var iconImg = createIcon(json.icon);
-            var marker = new BMap.Marker(point,{icon:iconImg});
-            var iw = createInfoWindow(i);
-            var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
-            marker.setLabel(label);
-            map.addOverlay(marker);
-            label.setStyle({
-                borderColor:"#808080",
-                color:"#333",
-                cursor:"pointer"
-            });
 
-            (function(){
-                var index = i;
-                var _iw = createInfoWindow(i);
-                var _marker = marker;
-                _marker.addEventListener("click",function(){
-                    this.openInfoWindow(_iw);
-                });
-                _iw.addEventListener("open",function(){
-                    _marker.getLabel().hide();
-                })
-                _iw.addEventListener("close",function(){
-                    _marker.getLabel().show();
-                })
-                label.addEventListener("click",function(){
-                    _marker.openInfoWindow(_iw);
-                })
-                if(!!json.isOpen){
-                    label.hide();
-                    _marker.openInfoWindow(_iw);
+
+        // for(var i=1;i<=3;i++){
+        //     setTimeout(function(){console.log(i);},0)
+        // }
+
+
+        // setTimeout(function() {
+        //     console.log(1);
+        // }, 0);
+        // Promise.resolve(function(){
+        //     console.log(2);
+        // });
+        // new Promise(function (resolve) {
+        //     console.log(3);
+        // });
+        // console.log(4);
+
+        // var name='world!';
+        // (function(){
+        //     if(typeof name === 'undefined'){
+        //         var name = 'jack';
+        //         console.log('Goodbye'+ name);
+        //     }else{
+        //         console.log('Hello'+ name);
+        //     }
+        // })();
+        // var test =(a='jd',b='.com')=>a+b;
+        // var name = null;var domain = '${name ?? 'jd'}.com';
+        // var name = 'jd';var map={name};
+        // var sites = {...['jd.com','jcloud.com']};
+
+
+
+        // var a,b;
+        // (function(){
+        //     alert(a);//un
+        //     alert(b);//un
+        //     var a=b=3;//b是全局变量
+        //     alert(a);//3
+        //     alert(a);//3
+
+        // })();
+        // alert(a);//un
+        // // alert(b);//3
+
+
+        // function mySort() {
+        //     var tags = new Array();//使用数组作为参数存储容器
+        //     tags = Array.prototype.slice.call(arguments)
+        //     tags.sort(function (pre, next) {
+        //         return pre - next;
+        //     })
+        // }
+        // var result = mySort(50, 11, 16, 32, 24, 99, 57, 100);//传入参数个数不确定
+        // console.log(result);//显示结果
+
+
+
+
+        // function mySort() {
+        //     var tags = new Array();//使用数组作为参数存储容器 
+        //     tags = Array.prototype.slice.call(arguments)
+        //     tags.sort(function (pre, next) {
+        //         return pre -  next;
+        //     })
+        //     return tags;//返回已经排序的数组 
+        // }
+        // var result = mySort(50, 11, 16, 32, 24, 99, 57, 100);//传入参数个数不确定
+        // console.log(result);//显示结果
+
+
+        // function sortNumber(a, b) {
+        //     return a - b
+        // }
+
+        // var arr = new Array(6)
+        // arr[0] = "10"
+        // arr[1] = "5"
+        // arr[2] = "40"
+        // arr[3] = "25"
+        // arr[4] = "1000"
+        // arr[5] = "1"
+
+        // document.write(arr + "<br />")
+        // document.write(arr.sort(sortNumber))
+
+        // function getRandom(n,m){
+        //     var w = m - n;
+        //     var num = Math.random()*w;
+        //     console.log(num);
+        // }
+        // getRandom(10,100)
+
+        // var str = 'abaccdeff';
+        // for(var i=0;i<str.length;i++){
+        //     if(str.indexOf(str.charAt(i)) == str.lastIndexOf(str.charAt(i)){
+        //         console.log(str.charAt(i));
+        //         break;
+        //     }
+        // }
+
+
+        function test(n,m){
+            for(var i=n;i<=m;i++){
+                if(i.toString().split('').reverse().join('') == i){
+                    console.log(i);
                 }
-            })()
+            }
         }
-    }
-    //����InfoWindow
-    function createInfoWindow(i){
-        var json = markerArr[i];
-        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
-        return iw;
-    }
-    //����һ��Icon
-    function createIcon(json){
-        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
-        return icon;
-    }
+        test(0,100)
+    </script>
+</body>
 
-    initMap();//�����ͳ�ʼ����ͼ
-</script>
 </html>
