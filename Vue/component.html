@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- <demo1 :my-msg1='a' msg2='ccccc'></demo1>
+       <demo1  :my-msg1='b'></demo1> -->
+        <demo1>
+            <div>
+                    <p slot="title">ppppppppp</p>
+            </div>
+           
+            <!-- <p>ppppppppp</p> -->
+            <!-- <div slot="title1">
+                <h1>hhhhhh</h1>
+            </div> -->
+        </demo1>
+    </div>
+    <!-- <div id="app2">
+
+    </div> -->
+    <script src="vue.js"></script>
+    <script type="text/x-template" id="temp">
+        <div>
+
+            <slot name='title'>
+                <h1>默认值</h1>
+
+            </slot>
+            aaaaaaaaa
+            <slot  name='title1'>
+                <h1>默认值1</h1>
+
+            </slot>
+        </div>
+
+
+
+    </script>
+    <script>
+        // Vue.component('demo',{
+        //     template:'<div><h1>hhhhhhhhhhhh</h1><p>ppppppppp</p></div>'
+        // });
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                a: 'aaaa',
+                b: 'bbbb'
+            },
+            components: {
+                demo1: {
+                    template: '#temp',
+                    props: ['myMsg1', 'msg2']
+                }
+
+            }
+        })
+
+        // new Vue({
+        //     el:'#app2'
+        // })
+    </script>
+
+</body>
+
+</html>

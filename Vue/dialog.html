@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #dialog-box {
+            width: 400px;
+            height: 300px;
+            background: #cccccc;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        #close {
+            float: right;
+        }
+
+        #title {
+            background: #0000ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <button @click="loginShow=true">登录</button>
+        <button @click="regShow=true">注册</button>
+        <mydialog v-show="loginShow" @close="closeDialog">
+            <span slot="title">登录</span>
+            <div slot="content">
+
+                name: <input type="text"><br/>
+                 password:<input type="password"><br/>
+                确认密码：<input type="password">
+            </div>
+        </mydialog>
+        <mydialog v-show="regShow">
+
+        </mydialog>
+
+    </div>
+
+    <script src="vue.js"></script>
+    <script type="text/x-template" id="dialog">
+        <div id="dialog-box">
+            <div id="title">
+                <slot name="title">
+                    title
+                </slot>
+                <span id="close" @click="$emit('close',123,456)">[X]</span>
+            </div>
+            <div id="content">
+                <slot name="content">
+                    content
+                </slot>
+            </div>
+
+        </div>
+
+
+    </script>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                loginShow: false,
+                regShow: false,
+            },
+            methods:{
+                closeDialog(a,b){
+                    this.loginShow = false;
+                    console.log(a,b);
+                }
+            },
+            components: {
+                mydialog: {
+                    template: "#dialog"
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
