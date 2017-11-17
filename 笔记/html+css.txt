@@ -24,6 +24,14 @@ span 标签都是矩形的
 背景颜色background 字体颜色color 宽度width 高度height
 注释ctrl+/
 复制ctrl+d
+
+label标签有一种作用是点击input前面的信息就会自动获取焦点
+input是写在label标签里面的
+ 
+input标签中name属性是向后台传值用的
+button 在form表单里面的时候是默认提交表单的
+不想提交的话要在button的type属性里写成button
+
 选择器：
 1：标签选择器：h1{}
 内联样式：直接写在标签里面
@@ -58,7 +66,23 @@ li{
 6：分组选择器:h1,div,p{}
 7.多类选择器：.aa.bb{}
 normalize.css
-8.伪类选择器：a:hover{}有兼容性问题 ie678只识别a标签
+8.伪类选择器：（真实存在的元素）a:hover{}有兼容性问题 ie678只识别a标签
+9、伪对象选择器  ::after 一个元素的内容前后插入
+                ::before 
+10、属性选择器：
+a[target=_blank]{
+
+}   
+11、兄弟选择器：+  ~
+
+12、css3选择器
+
+
+
+
+
+
+
 浮动：浮动的元素空间释放，脱离文档流
 元素塌陷：子元素脱离文档流，父元素没有高度
 1、给父元素固定高度
@@ -72,6 +96,8 @@ normalize.css
   display: inline;/*块级元素转化为行级元素*/
 display: inline-block;两个元素特点全有，有兼容性问题 既能在一行，也能设置宽和高
 行级元素脱离文档流也能设置宽和高
+
+
 
 ·定位position：
 相对定位relative：相对自己的初始位置。不空间释放，不脱离文档流
@@ -88,7 +114,13 @@ margin：0 auto；/*设置块级元素div水平居中  只有margin能设置*/
 
 
 
+盒模型:标准盒模型 内容大小
+怪异盒模型 内容加padding加border
+var iScrollTop = document.body.scrollTop || document.documentElement.scrollTop 获取滚动条距离浏览器的高度
 
+里外两个div 给里面设置margin-top 外面的大div也会往下去 如果只想让里面的往下去 那就要给外面的div设置overflow：hidden；
+ 上下两个div  上面的设置margin-bottom 下面的设置margin-top 那么上下的两个div的距离就是上下外边距的和
+ 
 
 
 

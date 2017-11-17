@@ -69,7 +69,7 @@ switch是判断值和类型，if只判断值
 
 
 函数必须要调用！！！
-函数直接量：先定义，后调用
+函数直接量  var bb = function(){}：先定义，后调用
 变量有两种：
 局部变量：只能作用一部分的函数
 全局变量：可以作用全局的函数
@@ -186,4 +186,24 @@ JavaScript提供了哪几种“异步模式”？
     2.采用call、Apply方法改变函数上下文实现继承
     3.原型链方式继承
 
+js选择器：
+document.getElementById("id");
+document.getElementByTagName("div");
 
+document.getElementByClassName("aa");兼容性
+document.querySelector("#id");兼容性
+document.querySelectorAll(".aa");兼容性
+
+
+nodetype 节点类型 1元素节点 3文本节点
+
+ 创建一个元素 var oDiv = document.creatElement("div")
+                oDiv.innerHTML = "asdad"
+                document.body.appendChild(oDiv)
+
+
+获取滚动条 
+window.onscroll = function(){
+    var iScrollTop = document.documentElement.scrollTop ||  document.body.scrollTop;
+    console.log(iScrollTop)
+}
