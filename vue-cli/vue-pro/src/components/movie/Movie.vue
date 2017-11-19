@@ -3,8 +3,8 @@
       <common-header></common-header>
       <movie-nav></movie-nav>
       <div class='list'>
-        <movie-list v-for="obj in movieList" :title="obj.title" :year="obj.year"
-        :avg = "obj.avg" :desc = "obj.desc"
+        <movie-list v-for="obj in movieList" :key="s" :title="obj.title" :year="obj.year"
+        :avg = "obj.avg" :desc = "obj.desc "
         ></movie-list>
       </div>
       <common-footer></common-footer>
@@ -38,16 +38,6 @@ export default {
           desc : [
             "同性",
             "武打片",
-          ]
-        },
-        {
-          title: "唯创网讯",
-          year : 2012,
-          avg  : 100,
-          desc : [
-            "教育",
-            "IT",
-            "惊悚"
           ]
         },  {
           title: "唯创网讯",
