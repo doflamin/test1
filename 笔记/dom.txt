@@ -37,15 +37,15 @@ true:事件捕获（从外往里）
 
 ！！！！！！！！！！！！！！！！！！！！！！！！！！先捕获后冒泡！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
 
-阻止事件冒泡：
-e.stopPropagation();
 
 只能在ie下用的：
 obj.attachEvent(on+type,function(){});
 只支持冒泡，不支持捕获
 顺序是相反的
 this指向window
-阻止冒泡window.event.cancelBubble = true;
+
+标准浏览器阻止事件冒泡：e.stopPropagation();
+早期浏览器阻止事件冒泡：window.event.cancelBubble = true;
 
 利用事件冒泡解决的问题
 事件代理/事件委托：
@@ -59,7 +59,10 @@ this指向window
 改变父元素的innerHtml
 
 
+获取元素样式，getComputedStyle(oDiv,null).width
+             oDiv.currentStyle.width
 
+             
 
 
 

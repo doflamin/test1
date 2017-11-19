@@ -207,3 +207,7 @@ window.onscroll = function(){
     var iScrollTop = document.documentElement.scrollTop ||  document.body.scrollTop;
     console.log(iScrollTop)
 }
+给元素绑定事件：
+oDiv.addEventListener("click",function(){},false) 先捕获，后冒泡 默认false 冒泡
+oDiv.attachEvent("onclick",function(){})  ie下用的 只支持冒泡
+
