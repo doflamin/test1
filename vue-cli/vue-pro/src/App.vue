@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <router-view/>
+    <router-link to="/counter">vuex</router-link>
   </div>
 </template>
 
