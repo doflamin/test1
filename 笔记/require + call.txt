@@ -27,6 +27,15 @@ bind和call一样，但是不会立即执行
 //        aa.apply(obj, ["lisi", 18]);
 //        aa.bind(obj)("lisi", 18);
 
+
+
+
+
+
+
+
+
+
 .bootstrap好处？
 自适应和响应式布局，12栅格系统，统一的界面风格和css样式有利于团队开发
 。编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。
