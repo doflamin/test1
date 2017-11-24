@@ -1,15 +1,15 @@
 <template>
   <div class="top250">
      <div class='movie-img'>
-        <img src="../../assets/logo.png" alt="">
+        <img :src="img" alt="">
      </div>
      <div class='movie-title'>
        <span>
          {{title}}
        </span>
        <p>
-          <span v-for="a in desc">
-            {{a}} 
+          <span>
+            {{desc}} 
             </span>
             ({{year}}) (平均{{avg}}分) 
        </p>
@@ -20,8 +20,8 @@
 <script>
 
 export default {
-  // name : 'HelloWorld',
-  props: ['title','avg','desc','year'],
+  name : 'HelloWorld',
+  props: ['title','avg','desc','year','img'],
   data () {
     return {
     }
@@ -34,6 +34,7 @@ export default {
 <style scoped>
     .top250{
       padding: 0.4rem;
+      margin : 0.4rem 0;
     }
     .movie-img{
       float : left;

@@ -1,163 +1,58 @@
 <template>
   <div class="movie">
-      <common-header></common-header>
+      <common-header title="movie" bgColor="rgb(33, 150, 243)"></common-header>
       <movie-nav></movie-nav>
       <div class='list'>
-        <movie-list v-for="obj in movieList" :key="s" :title="obj.title" :year="obj.year"
-        :avg = "obj.avg" :desc = "obj.desc "
+        <movie-list v-for="(obj,index) in movieList" :key="index" :title="obj.nm" :year="obj.snum"
+        :avg = "obj.sc" :img = "obj.img" :desc = "obj.cat"
         ></movie-list>
+      </div>
+      <div class='loading' v-show="isShow">
+          <img src="/static/img/loading.gif" alt="">
       </div>
       <common-footer></common-footer>
   </div>
 </template>
 
 <script>
-import CommonHeader from "../common/CommonHeader"
-import CommonFooter from "../common/CommonFooter"
-import MovieNav from "./MovieNav"
-import MovieList from "./MovieList"
+import CommonHeader from "../common/CommonHeader";
+import CommonFooter from "../common/CommonFooter";
+import MovieNav from "./MovieNav";
+import MovieList from "./MovieList";
+import Axios from "axios";
 export default {
-//   name: 'HelloWorld',
-  data () {
+  name: "HelloWorld",
+  data() {
     return {
-      movieList:[
-        {
-          title: "霸王别姬",
-          year : 1994,
-          avg  : 9.6,
-          desc : [
-            "同性",
-            "爱情",
-            "悬疑"
-          ]
-        },
-        {
-          title: "正义联盟",
-          year : 2017,
-          avg  : 0.0,
-          desc : [
-            "同性",
-            "武打片",
-          ]
-        },  {
-          title: "唯创网讯",
-          year : 2012,
-          avg  : 100,
-          desc : [
-            "教育",
-            "IT",
-            "惊悚"
-          ]
-        },  {
-          title: "唯创网讯",
-          year : 2012,
-          avg  : 100,
-          desc : [
-            "教育",
-            "IT",
-            "惊悚"
-          ]
-        },  {
-          title: "唯创网讯",
-          year : 2012,
-          avg  : 100,
-          desc : [
-            "教育",
-            "IT",
-            "惊悚"
-          ]
-        },  {
-          title: "唯创网讯",
-          year : 2012,
-          avg  : 100,
-          desc : [
-            "教育",
-            "IT",
-            "惊悚"
-          ]
-        },  {
-          title: "唯创网讯",
-          year : 2012,
-          avg  : 100,
-          desc : [
-            "教育",
-            "IT",
-            "惊悚"
-          ]
-        },  {
-          title: "唯创网讯",
-          year : 2012,
-          avg  : 100,
-          desc : [
-            "教育",
-            "IT",
-            "惊悚"
-          ]
-        },  {
-          title: "唯创网讯",
-          year : 2012,
-          avg  : 100,
-          desc : [
-            "教育",
-            "IT",
-            "惊悚"
-          ]
-        },  {
-          title: "唯创网讯",
-          year : 2012,
-          avg  : 100,
-          desc : [
-            "教育",
-            "IT",
-            "惊悚"
-          ]
-        },  {
-          title: "唯创网讯",
-          year : 2012,
-          avg  : 100,
-          desc : [
-            "教育",
-            "IT",
-            "惊悚"
-          ]
-        },  {
-          title: "唯创网讯",
-          year : 2012,
-          avg  : 100,
-          desc : [
-            "教育",
-            "IT",
-            "惊悚"
-          ]
-        },  {
-          title: "唯创网讯",
-          year : 2012,
-          avg  : 100,
-          desc : [
-            "教育",
-            "IT",
-            "惊悚"
-          ]
-        },  {
-          title: "唯创网讯",
-          year : 2012,
-          avg  : 100,
-          desc : [
-            "教育",
-            "IT",
-            "惊悚"
-          ]
-        },  {
-          title: "唯创网讯",
-          year : 2012,
-          avg  : 100,
-          desc : [
-            "教育",
-            "IT",
-            "惊悚"
-          ]
-        }
-      ]
+      movieList: [],
+      isShow: false
+    };
+  },
+  mounted() {
+    let _this = this;
+    window.onscroll = function() {
+      let scrollTop = document.documentElement.scrollTop;
+      let clientHeight = document.documentElement.clientHeight;
+      let htmlHeight = document.documentElement.scrollHeight;
+      if (scrollTop + clientHeight >= htmlHeight) {
+        _this.isShow = true;
+        _this.loadData();
+      }
+    };
+    //https://api.douban.com/v2/movie/top250?count=10&start=10
+    this.loadData();
+  },
+  methods: {
+    loadData() {
+      Axios.get(
+        API_PROXY +
+          "http://m.maoyan.com/movie/list.json?type=hot&offset=" +
+          this.movieList.length +
+          "&limit=10"
+      ).then(res => {
+        this.movieList = this.movieList.concat(res.data.data.movies);
+        this.isShow = false;
+      });
     }
   },
   components: {
@@ -166,12 +61,16 @@ export default {
     MovieNav,
     MovieList
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    .list{
-       margin-top: 2rem;
-    }
+.list {
+  margin: 2rem 0 1.6rem;
+}
+.loading {
+  margin-bottom: 1rem;
+  text-align: center;
+}
 </style>

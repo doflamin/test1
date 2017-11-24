@@ -1,7 +1,7 @@
 <template>
-<div class="header">
-      <button>首页</button>
-      <h2>movie</h2>
+<div class="header" :style="{background:bgColor}">
+      <button :style="{background:bgColor}">首页</button>
+      <h2>{{title}}</h2>
 </div>
 
 </template>
@@ -10,10 +10,10 @@
 
 <script>
    export default {
-  name: 'HelloWorld',
+   props: ['title','bgColor'],
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      
     }
   }
 } 
@@ -36,7 +36,9 @@
         width : 1rem;
         height: 1rem;
         color : #fff;
-        background: rgb(33, 150, 243);
+        line-height: 1rem;
+        font-size: 20px;
+   
         border:0px;
         outline:none;        
       }
