@@ -6,42 +6,65 @@ import Counter from '@/components/Counter'
 import Music from '@/components/music/Music'
 import Book from '@/components/book/Book'
 import Photo from '@/components/photo/Photo'
+import MovieTop250 from '@/components/movie/MovieTop250'
+import Albums from '@/components/music/MusicList'
+import Player from '@/components/music/MusicPlayer'
+
 
 
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
+  routes: [{
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      redirect: '/movie/top250'
     },
     {
-      path:"/movie",
-      component: Movie
-      
-      
+      path: '/movie',
+      component: Movie,
+      redirect: '/movie/top250',
+      children: [{
+          path: '/movie/top250',
+          component: MovieTop250
+        },
+        {
+          path: '/movie/hot',
+          component: MovieTop250
+        },
+        {
+          path: '/movie/coming',
+          component: MovieTop250
+        }
+      ]
     },
     {
-      path:'/counter' ,
-      name:'counter',
-      component:Counter
+      path: '/counter',
+      name: 'counter',
+      component: Counter
+    },
+
+    {
+      path: '/music',
+      component: Music,
+      redirect: '/music/music_albums',
+
+      children: [{
+          path: '/music/music_albums',
+          component: Albums
+        },
+        {
+          path: '/music/music_player/:id/:name',
+          component: Player
+        }
+      ]
     },
     {
-      path:'/music' ,
-      name:'music',
-      component:Music
+      path: '/book',
+      component: Book
     },
     {
-      path:'/book' ,
-      name:'bookr',
-      component:Book
-    },
-    {
-      path:'/photo' ,
-      name:'photo',
-      component:Photo
+      path: '/photo',
+      component: Photo
     }
   ]
 })
