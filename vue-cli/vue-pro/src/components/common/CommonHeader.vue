@@ -1,6 +1,6 @@
 <template>
 <div class="header" :style="{background:bgColor}">
-      <button :style="{background:bgColor}" >首页</button>
+      <button :style="{background:bgColor}" > <router-link to="/movie/top250"><span>首页</span></router-link></button>
       <h2>{{title}}</h2>
 </div>
 
@@ -41,5 +41,10 @@
          flex       : 1;
          text-indent: -1rem;
     }
+     .header  span{
+        color: #fff;
+        
+      }
+    
 
 </style>
