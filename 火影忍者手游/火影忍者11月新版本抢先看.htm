@@ -1,203 +1,276 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!-- saved from url=(0046)http://hyrz.qq.com/cp/a20171101new/index.shtml -->
-<html lang="zh-CN" style="font-size: 100px;"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
-    
+<html lang="zh-CN" style="font-size: 100px;">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
     <meta name="robots" content="all">
     <meta name="author" content="Tencent-TGideas">
     <meta name="Copyright" content="Tencent">
-    <meta name="Description" content="����Ӱ���ߡ�������Ϊ�����Ӱ���߸����Σ���������ι���������Ѷ��Ϸħ��������Ⱥ��ͬ��������Ӣ�硢Ƥ�֡���������̨���ϼ��ޡ����Ͻ���ԭ����Ӱ���ߡ����¾���Ļ����ϣ�����������ϵͳ�����CG���Ļ������ܱ��֣��������麨������ĸ����У������������ռ��������ߣ�׷Ѱ�����Լ���Ӣ���̵��� ">
-    <meta name="Keywords" content="��Ӱ, ��Ӱ����, ��Ӱ����, ��Ӱ��������, ��, ������, ����, ��Ӱ���߸�����, ��Ӱ������, ��������, ����, ����, ������, �Ұ���, �Ĵ������, ���ǲ�, Сӣ, ����, ������, ������, ���, ��洳��, ����, RPG ">
-    <title>��Ӱ����11���°汾���ȿ�</title>
-    <link rel="stylesheet" href="./��Ӱ����11���°汾���ȿ�_files/ninjaUI.css">
-    <link rel="stylesheet" href="./��Ӱ����11���°汾���ȿ�_files/style.css">
+    <meta name="Description" content="《火影忍者》手游作为正版火影忍者格斗手游，由万代南梦宫娱乐与腾讯游戏魔方工作室群共同开发，集英社、皮乐、东京电视台联合监修。在严谨还原《火影忍者》故事精髓的基础上，独创忍术格斗系统，配合CG级的华丽技能表现，尽兴体验酣畅淋漓的格斗连招；更可以自由收集热门忍者，追寻属于自己的英雄忍道！ ">
+    <meta name="Keywords" content="火影, 火影忍者, 火影手游, 火影忍者手游, 格斗, 格斗手游, 手游, 火影忍者格斗手游, 火影格斗手游, 动作手游, 鸣人, 佐助, 卡卡西, 我爱罗, 四代、佩恩, 宇智波, 小樱, 雏田, 大蛇丸, 横版过关, 横版, 横版闯关, 忍术, RPG ">
+    <title>火影忍者11月新版本抢先看</title>
+    <link rel="stylesheet" href="./火影忍者11月新版本抢先看_files/ninjaUI.css">
+    <link rel="stylesheet" href="./火影忍者11月新版本抢先看_files/style.css">
     <script>
-    (function (win,doc){
-        if (!win.addEventListener) return;
-        var html = document.documentElement;
-        function setFont(){
-            var cliWidth=html.clientWidth;
-            html.style.fontSize=100*(cliWidth/1920)+'px';
-        }
-        win.addEventListener('resize',setFont,false);
-        setFont();
-    })(window,document);
-    var setSite = {
-        siteType: "a20171101new", //������:"os"�����ǹ�����������ǣ�����дactName����a20160701xxx
-        pageType: "index", //������:��ҳ��Ķ�λ������ index|| page1 ||page2
-        pageName: "��ҳ", //������:��ҳ��Ķ�λ������ ��ҳ|| ҳ��1 || ҳ��2
-        osact: 0, //������:�Ƿ��ǹ���ר��(�Ƿ��ڹ�������������)��booleanֵ 0||1
-    };
+        (function (win, doc) {
+            if (!win.addEventListener) return;
+            var html = document.documentElement;
 
-    function is_pc() {
-        var os = new Array("Android", "iPhone", "Windows Phone", "iPod", "BlackBerry", "MeeGo", "SymbianOS"); // �������͵��ƶ�����ϵͳ���ͣ���������
-        var info = navigator.userAgent;
-        var len = os.length;
-        for (var i = 0; i < len; i++) {
-            if (info.indexOf(os[i]) > 0) {
-                return false;
+            function setFont() {
+                var cliWidth = html.clientWidth;
+                html.style.fontSize = 100 * (cliWidth / 1920) + 'px';
             }
+            win.addEventListener('resize', setFont, false);
+            setFont();
+        })(window, document);
+        var setSite = {
+            siteType: "a20171101new", //必填项:"os"代表是官网，如果不是，则填写actName比如a20160701xxx
+            pageType: "index", //必填项:本页面的定位；比如 index|| page1 ||page2
+            pageName: "首页", //必填项:本页面的定位；比如 首页|| 页面1 || 页面2
+            osact: 0, //必填项:是否是官网专题(是否在官网有链接推送)，boolean值 0||1
+        };
+
+        function is_pc() {
+            var os = new Array("Android", "iPhone", "Windows Phone", "iPod", "BlackBerry", "MeeGo", "SymbianOS"); // 其他类型的移动操作系统类型，自行添加
+            var info = navigator.userAgent;
+            var len = os.length;
+            for (var i = 0; i < len; i++) {
+                if (info.indexOf(os[i]) > 0) {
+                    return false;
+                }
+            }
+            return true;
         }
-        return true;
-    }
-    // ������ƶ��豸��ֱ����ת���ֻ���վҳ��
-    if (!is_pc()) {
-         window.location.href = "//hyrz.qq.com/cp/a20171101newm/index.shtml";
-    }
+        // 如果是移动设备就直接跳转到手机网站页面
+        if (!is_pc()) {
+            window.location.href = "//hyrz.qq.com/cp/a20171101newm/index.shtml";
+        }
     </script>
-<link href="./��Ӱ����11���°汾���ȿ�_files/ost.min.css" rel="stylesheet" type="text/css"></head>
+    <link href="./火影忍者11月新版本抢先看_files/ost.min.css" rel="stylesheet" type="text/css">
+</head>
 
 <body style="padding-top: 42px;">
     <div class="wrap">
         <div class="closeweima">
             <a href="http://hyrz.qq.com/cp/a20171101new/index.shtml#">
-                <img src="./��Ӱ����11���°汾���ȿ�_files/btn-down01.png" alt="">
+                <img src="./火影忍者11月新版本抢先看_files/btn-down01.png" alt="">
             </a>
         </div>
         <div class="openweima">
             <a href="http://hyrz.qq.com/cp/a20171101new/index.shtml#">
-                <img src="./��Ӱ����11���°汾���ȿ�_files/btn-down02.png" alt="">
+                <img src="./火影忍者11月新版本抢先看_files/btn-down02.png" alt="">
             </a>
         </div>
         <div class="page0">
-            <img src="./��Ӱ����11���°汾���ȿ�_files/bg-p0.jpg" alt="" class="bg">
-            <img src="./��Ӱ����11���°汾���ȿ�_files/logo.png" alt="" class="logo pa">
-            <img src="./��Ӱ����11���°汾���ȿ�_files/p0-tt.png" alt="" class="p0-tt pa">
-            <a href="http://hyrz.qq.com/cp/a20171101new/index.shtml" class="btn-detail pa"><img src="./��Ӱ����11���°汾���ȿ�_files/btn-detail.png" alt=""></a>
-            <a href="http://hyrz.qq.com/main.shtml" class="btn-web pa"><img src="./��Ӱ����11���°汾���ȿ�_files/btn-web.png" alt=""></a>
-            <a href="http://hyrz.qq.com/cp/a20171101new/index.shtml#" class="btn-share pa"><img src="./��Ӱ����11���°汾���ȿ�_files/btn-share.png" alt=""></a>
-            <img src="./��Ӱ����11���°汾���ȿ�_files/logo-text.png" alt="" class="logo-text pa">
+            <img src="./火影忍者11月新版本抢先看_files/bg-p0.jpg" alt="" class="bg">
+            <img src="./火影忍者11月新版本抢先看_files/logo.png" alt="" class="logo pa">
+            <img src="./火影忍者11月新版本抢先看_files/p0-tt.png" alt="" class="p0-tt pa">
+            <a href="http://hyrz.qq.com/cp/a20171101new/index.shtml" class="btn-detail pa"><img src="./火影忍者11月新版本抢先看_files/btn-detail.png" alt=""></a>
+            <a href="http://hyrz.qq.com/main.shtml" class="btn-web pa"><img src="./火影忍者11月新版本抢先看_files/btn-web.png" alt=""></a>
+            <a href="http://hyrz.qq.com/cp/a20171101new/index.shtml#" class="btn-share pa"><img src="./火影忍者11月新版本抢先看_files/btn-share.png" alt=""></a>
+            <img src="./火影忍者11月新版本抢先看_files/logo-text.png" alt="" class="logo-text pa">
             <div class="spot-box">
-                <img src="./��Ӱ����11���°汾���ȿ�_files/spot.png" alt="" class="spot01">
-                <img src="./��Ӱ����11���°汾���ȿ�_files/spot.png" alt="" class="spot02">
-                <img src="./��Ӱ����11���°汾���ȿ�_files/spot.png" alt="" class="spot03">
+                <img src="./火影忍者11月新版本抢先看_files/spot.png" alt="" class="spot01">
+                <img src="./火影忍者11月新版本抢先看_files/spot.png" alt="" class="spot02">
+                <img src="./火影忍者11月新版本抢先看_files/spot.png" alt="" class="spot03">
             </div>
         </div>
         <div class="page-wrap">
             <div class="common">
-                <img src="./��Ӱ����11���°汾���ȿ�_files/bg-p1.jpg" alt="" class="bg">
-                <img src="./��Ӱ����11���°汾���ȿ�_files/logo.png" alt="" class="logo pa">
-                <img src="./��Ӱ����11���°汾���ȿ�_files/flower01.png" alt="" class="flower01 pa flower">
-                <img src="./��Ӱ����11���°汾���ȿ�_files/flower02.png" alt="" class="flower02 pa flower">
-                <img src="./��Ӱ����11���°汾���ȿ�_files/logo-text.png" alt="" class="logo-text pa">
-                <a href="http://hyrz.qq.com/main.shtml" class="btn-web pa"><img src="./��Ӱ����11���°汾���ȿ�_files/btn-web.png" alt=""></a>
-                <a href="http://hyrz.qq.com/cp/a20171101new/index.shtml#" class="btn-share pa"><img src="./��Ӱ����11���°汾���ȿ�_files/btn-share.png" alt=""></a>
-                <a href="http://hyrz.qq.com/cp/a20171101new/index.shtml#" class="btn-back pa"><img src="./��Ӱ����11���°汾���ȿ�_files/btn-back.png" alt=""></a>
+                <img src="./火影忍者11月新版本抢先看_files/bg-p1.jpg" alt="" class="bg">
+                <img src="./火影忍者11月新版本抢先看_files/logo.png" alt="" class="logo pa">
+                <img src="./火影忍者11月新版本抢先看_files/flower01.png" alt="" class="flower01 pa flower">
+                <img src="./火影忍者11月新版本抢先看_files/flower02.png" alt="" class="flower02 pa flower">
+                <img src="./火影忍者11月新版本抢先看_files/logo-text.png" alt="" class="logo-text pa">
+                <a href="http://hyrz.qq.com/main.shtml" class="btn-web pa"><img src="./火影忍者11月新版本抢先看_files/btn-web.png" alt=""></a>
+                <a href="http://hyrz.qq.com/cp/a20171101new/index.shtml#" class="btn-share pa"><img src="./火影忍者11月新版本抢先看_files/btn-share.png" alt=""></a>
+                <a href="http://hyrz.qq.com/cp/a20171101new/index.shtml#" class="btn-back pa"><img src="./火影忍者11月新版本抢先看_files/btn-back.png" alt=""></a>
                 <div class="scroll-box pa">
-                    <img src="./��Ӱ����11���°汾���ȿ�_files/scroll-l.png" alt="" class="scroll-l pa">
+                    <img src="./火影忍者11月新版本抢先看_files/scroll-l.png" alt="" class="scroll-l pa">
                     <div class="middle-box pa">
-                        <img src="./��Ӱ����11���°汾���ȿ�_files/scroll-shadow.png" alt="" class="sl-shadow pa">
-                        <img src="./��Ӱ����11���°汾���ȿ�_files/scroll-m.png" alt="" class="scroll-m pa">
+                        <img src="./火影忍者11月新版本抢先看_files/scroll-shadow.png" alt="" class="sl-shadow pa">
+                        <img src="./火影忍者11月新版本抢先看_files/scroll-m.png" alt="" class="scroll-m pa">
                     </div>
-                    <img src="./��Ӱ����11���°汾���ȿ�_files/scroll-r.png" alt="" class="scroll-r pa">
+                    <img src="./火影忍者11月新版本抢先看_files/scroll-r.png" alt="" class="scroll-r pa">
                 </div>
-                <p class="des"><em>*</em>����Ϸ����������Ϊ׼</p>
+                <p class="des"><em>*</em>以游戏内上线内容为准</p>
                 <div class="tab">
                     <ul>
-                        <li class="it01"><img src="./��Ӱ����11���°汾���ȿ�_files/tab01_un.png" alt=""><img src="./��Ӱ����11���°汾���ȿ�_files/tab01.png" alt="" class="tab-on"></li>
-                        <li class="it02"><img src="./��Ӱ����11���°汾���ȿ�_files/tab02_un.png" alt=""><img src="./��Ӱ����11���°汾���ȿ�_files/tab02.png" alt="" class="tab-on"></li>
-                        <li class="it03"><img src="./��Ӱ����11���°汾���ȿ�_files/tab03_un.png" alt=""><img src="./��Ӱ����11���°汾���ȿ�_files/tab03.png" alt="" class="tab-on"></li>
-                        <li class="it04"><img src="./��Ӱ����11���°汾���ȿ�_files/tab04_un.png" alt=""><img src="./��Ӱ����11���°汾���ȿ�_files/tab04.png" alt="" class="tab-on"></li>
-                        <li class="it05"><img src="./��Ӱ����11���°汾���ȿ�_files/tab05_un.png" alt=""><img src="./��Ӱ����11���°汾���ȿ�_files/tab05.png" alt="" class="tab-on"></li>
+                        <li class="it01"><img src="./火影忍者11月新版本抢先看_files/tab01_un.png" alt=""><img src="./火影忍者11月新版本抢先看_files/tab01.png" alt=""
+                                class="tab-on"></li>
+                        <li class="it02"><img src="./火影忍者11月新版本抢先看_files/tab02_un.png" alt=""><img src="./火影忍者11月新版本抢先看_files/tab02.png" alt=""
+                                class="tab-on"></li>
+                        <li class="it03"><img src="./火影忍者11月新版本抢先看_files/tab03_un.png" alt=""><img src="./火影忍者11月新版本抢先看_files/tab03.png" alt=""
+                                class="tab-on"></li>
+                        <li class="it04"><img src="./火影忍者11月新版本抢先看_files/tab04_un.png" alt=""><img src="./火影忍者11月新版本抢先看_files/tab04.png" alt=""
+                                class="tab-on"></li>
+                        <li class="it05"><img src="./火影忍者11月新版本抢先看_files/tab05_un.png" alt=""><img src="./火影忍者11月新版本抢先看_files/tab05.png" alt=""
+                                class="tab-on"></li>
                     </ul>
                 </div>
-                <img src="./��Ӱ����11���°汾���ȿ�_files/arrow.png" alt="" class="arrow pa">
+                <img src="./火影忍者11月新版本抢先看_files/arrow.png" alt="" class="arrow pa">
             </div>
             <div class="p1-con con pa">
-                <img src="./��Ӱ����11���°汾���ȿ�_files/p1-tt.png" alt="" class="p1-tt">
-                <p>����3V3�������淨����Ұ���Ϸ����ѡ�������ϳ����Գ���ս����ʽ����PK����Ȥ���ǣ���1V1PK�������ϳ����߿�ѡ������ͬ����С�Ԯ������Ԯ��ʱ�����ޣ��������á�Ԯ������ʱ�����Ͷ��Ѽ������أ����ڴ�汾���������飡</p>
-                <img src="./��Ӱ����11���°汾���ȿ�_files/p1-img.png" alt="" class="p1-img pa">
+                <img src="./火影忍者11月新版本抢先看_files/p1-tt.png" alt="" class="p1-tt">
+                <p>新增3V3决斗场玩法，玩家按游戏规则选择忍者上场，以车轮战的形式进行PK。有趣的是，在1V1PK过程中上场忍者可选择邀请同伴进行“援护”。援护时间有限，怎样利用“援护”的时机，和队友间的配合呢？可在大版本中亲身体验！</p>
+                <img src="./火影忍者11月新版本抢先看_files/p1-img.png" alt="" class="p1-img pa">
             </div>
             <div class="p2-con con pa">
-                <img src="./��Ӱ����11���°汾���ȿ�_files/p2-tt.png" alt="" class="p2-tt">
-                <p>����3V3�������淨����ҿ������µ�ͼ�Ͻ�������PK���ݴԿ��������Լ����м������������븽��15sˢ��һ�Ρ��������߻�ˢ�����ƾ��ᣬʰȡ���Իָ�һ��Ѫ�����������������Я���ľ�������ԭ�ء��ȴﵽ10������10s��С��Ϊʤ��</p>
-                <img src="./��Ӱ����11���°汾���ȿ�_files/p2-img01.png" alt="" class="p2-img01 pa">
-                <img src="./��Ӱ����11���°汾���ȿ�_files/p2-img02.png" alt="" class="p2-img02 pa">
+                <img src="./火影忍者11月新版本抢先看_files/p2-tt.png" alt="" class="p2-tt">
+                <p>新增3V3决斗场玩法，玩家可以在新地图上进行自由PK。草丛可以隐藏自己的行迹，卷轴在中央附近15s刷新一次。上下两边会刷新治疗卷轴，拾取可以恢复一定血量。如果阵亡，身上携带的卷轴会掉落原地。先达到10个卷轴10s的小队为胜。</p>
+                <img src="./火影忍者11月新版本抢先看_files/p2-img01.png" alt="" class="p2-img01 pa">
+                <img src="./火影忍者11月新版本抢先看_files/p2-img02.png" alt="" class="p2-img02 pa">
             </div>
             <div class="p3-con con pa">
-                <img src="./��Ӱ����11���°汾���ȿ�_files/p3-tt.png" alt="" class="p3-tt">
-                <p>���������ľ�ս���쳣��ʵ������ͫ���������ϡ�д���ۡ���ʤһ��������ڽ���������������������ƽ����п־��������˫����ľ���޷��������������������ָ��ȴֻ�����ᴥ���������Ķ�ͷ��ͬʱ˵������Ļ������Сʱ�������ĸ�簲ο����һ��......</p>
-                <img src="./��Ӱ����11���°汾���ȿ�_files/p3-img.png" alt="" class="p3-img pa">
+                <img src="./火影忍者11月新版本抢先看_files/p3-tt.png" alt="" class="p3-tt">
+                <p>佐助与鼬的决战是异常虚实交错的瞳术死斗，较「写轮眼」更胜一筹的鼬终于将佐助逼入绝境。面对死神逼近备感恐惧的佐助，双脚麻木，无法言语，但鼬刺向佐助的手指，却只是轻轻触碰了佐助的额头，同时说出温柔的话语。就像小时候体贴的哥哥安慰佐助一样......</p>
+                <img src="./火影忍者11月新版本抢先看_files/p3-img.png" alt="" class="p3-img pa">
             </div>
             <div class="p4-con con pa">
-                <img src="./��Ӱ����11���°汾���ȿ�_files/p4-tt.png" alt="" class="p4-tt">
+                <img src="./火影忍者11月新版本抢先看_files/p4-tt.png" alt="" class="p4-tt">
                 <ul>
                     <li>
-                        <img src="./��Ӱ����11���°汾���ȿ�_files/sub-t01.png" alt="" class="sub-t01">
-                        <p>��ɫ��ԭ�ؽ�ӡ��������һ������������ǰ�ƶ������������˲����޴�ը���ڽ�ӡ�ڼ��ܵ�������ɢ�ɺ�Ҷ����һ��һ������������ǰ�ƶ���֮�����ֵ������������һ�ο��ٶ���ǿ��������ת������</p>
+                        <img src="./火影忍者11月新版本抢先看_files/sub-t01.png" alt="" class="sub-t01">
+                        <p>角色在原地结印，制作出一个分身缓慢向前移动，触碰到敌人产生巨大爆炸。在结印期间受到攻击会散成红叶并留一下一个分身缓慢向前移动，之后闪现到敌人身后进行一次快速而且强有力的旋转攻击。</p>
                     </li>
                     <li>
-                        <img src="./��Ӱ����11���°汾���ȿ�_files/sub-t02.png" alt="" class="sub-t02">
-                        <p>�õ��˿�������Ļ��������ҳû������������ͻϮ��</p>
+                        <img src="./火影忍者11月新版本抢先看_files/sub-t02.png" alt="" class="sub-t02">
+                        <p>让敌人看到花瓣的幻术，并且趁机穿过花瓣进行突袭。</p>
                     </li>
                     <li>
-                        <img src="./��Ӱ����11���°汾���ȿ�_files/sub-t03.png" alt="" class="sub-t03">
-                        <p>��ǰ������һ�ź�Ҷ�����������������н��������Ĺ�����</p>
+                        <img src="./火影忍者11月新版本抢先看_files/sub-t03.png" alt="" class="sub-t03">
+                        <p>在前方创建一颗红叶树，将敌人困在树中进行连续的攻击。</p>
                     </li>
                 </ul>
-                <img src="./��Ӱ����11���°汾���ȿ�_files/r1.png" alt="" class="r1 role pa">
+                <img src="./火影忍者11月新版本抢先看_files/r1.png" alt="" class="r1 role pa">
             </div>
             <div class="p5-con con pa">
-                <img src="./��Ӱ����11���°汾���ȿ�_files/p5-tt.png" alt="" class="p5-tt">
-                <a href="http://hyrz.qq.com/cp/a20171101new/index.shtml" class="btn-play pa"><img src="./��Ӱ����11���°汾���ȿ�_files/btn-play.png" alt=""></a>
-                <img src="./��Ӱ����11���°汾���ȿ�_files/hand-tips.png" alt="" class="hand-tips pa">
+                <img src="./火影忍者11月新版本抢先看_files/p5-tt.png" alt="" class="p5-tt">
+                <a href="http://hyrz.qq.com/cp/a20171101new/index.shtml" class="btn-play pa"><img src="./火影忍者11月新版本抢先看_files/btn-play.png" alt=""></a>
+                <img src="./火影忍者11月新版本抢先看_files/hand-tips.png" alt="" class="hand-tips pa">
                 <ul>
                     <li>
-                        <img src="./��Ӱ����11���°汾���ȿ�_files/sub-t04.png" alt="" class="sub-t04">
-                        <p>��ͷ�����������Լ���������Ĵ�/��������������ת������</p>
+                        <img src="./火影忍者11月新版本抢先看_files/sub-t04.png" alt="" class="sub-t04">
+                        <p>在头顶持续挥舞自己武器兜割的锤/斧，持续进行旋转攻击。</p>
                     </li>
                     <li>
-                        <img src="./��Ӱ����11���°汾���ȿ�_files/sub-t05.png" alt="" class="sub-t05">
-                        <p>˲������Ļ��֮��������Ԥ����ʾ�����ʹ�ô�/������Ԥ����������˺�������/�Ʒ�����ʹ�ô����Ǹ��ɼ���1������</p>
+                        <img src="./火影忍者11月新版本抢先看_files/sub-t05.png" alt="" class="sub-t05">
+                        <p>瞬身出屏幕，之后地面出现预警提示，最后使用锤/斧砸向预警区域，造成伤害并减速/破防。（使用锤还是斧由技能1决定）</p>
                     </li>
                     <li>
-                        <img src="./��Ӱ����11���°汾���ȿ�_files/sub-t06.png" alt="" class="sub-t06">
-                        <p>ʹ�ö���Ĵ��ҵأ����ǰ������������ѣ��������������У�֮��˲�������ڵ���ͷ����ʹ�ö���ĸ�������������ˣ������ʹ�ô����򸫱���������һ����</p>
+                        <img src="./火影忍者11月新版本抢先看_files/sub-t06.png" alt="" class="sub-t06">
+                        <p>使用兜割的锤砸地，造成前方区域地面破裂，将敌人震至空中，之后瞬身出现在敌人头顶，使用兜割的斧将敌人劈向敌人，最后再使用锤砸向斧背，完成最后一击。</p>
                     </li>
                 </ul>
-                <img src="./��Ӱ����11���°汾���ȿ�_files/r2.png" alt="" class="r2 role pa">
+                <img src="./火影忍者11月新版本抢先看_files/r2.png" alt="" class="r2 role pa">
             </div>
             <div class="p6-con con pa">
-                <img src="./��Ӱ����11���°汾���ȿ�_files/p5-tt.png" alt="" class="p6-tt">
+                <img src="./火影忍者11月新版本抢先看_files/p5-tt.png" alt="" class="p6-tt">
                 <ul>
                     <li>
-                        <img src="./��Ӱ����11���°汾���ȿ�_files/sub-t07.png" alt="" class="sub-t07">
-                        <p>������������Ӱ�������������� ���ʹ�������ּл����֡�</p>
+                        <img src="./火影忍者11月新版本抢先看_files/sub-t07.png" alt="" class="sub-t07">
+                        <p>漩涡鸣人利用影分身声东击西， 最后使用蛙组手夹击对手。</p>
                     </li>
                     <li>
-                        <img src="./��Ӱ����11���°汾���ȿ�_files/sub-t08.png" alt="" class="sub-t08">
-                        <p>��������ʹ��Ӱ����Э����������ͬʱʹ������������˹�����</p>
+                        <img src="./火影忍者11月新版本抢先看_files/sub-t08.png" alt="" class="sub-t08">
+                        <p>漩涡鸣人使用影分身协助，左右手同时使用螺旋丸向敌人攻击。</p>
                     </li>
                     <li>
-                        <img src="./��Ӱ����11���°汾���ȿ�_files/sub-t09.png" alt="" class="sub-t09">
-                        <p>�����ڵ�����������ۼ�Ȼ�󱬷�������ʹ�Լ���ʱ���ڽ�������ģʽ������״̬�������Լ���������ͨ������������ͬʱ�����ͷ��桤��ݡ��������｣��</p>
+                        <img src="./火影忍者11月新版本抢先看_files/sub-t09.png" alt="" class="sub-t09">
+                        <p>将体内的仙术查克拉聚集然后爆发出来，使自己短时间内进入仙人模式·觉醒状态，提升自己忍术和普通攻击的威力。同时可以释放真·风遁·螺旋手里剑。</p>
                     </li>
                 </ul>
-                <img src="./��Ӱ����11���°汾���ȿ�_files/r3.png" alt="" class="r3 pa">
+                <img src="./火影忍者11月新版本抢先看_files/r3.png" alt="" class="r3 pa">
             </div>
         </div>
         <div class="video-wrap">
             <video id="video1" class="mp4" preload="auto">
-              <source src="//game.gtimg.cn/images/hyrz/cp/a20171101new/video.mp4">
-              �����������֧�ֲ��Ÿ���Ƶ��
+                <source src="//game.gtimg.cn/images/hyrz/cp/a20171101new/video.mp4"> 您的浏览器不支持播放该视频！
             </video>
-            <img src="./��Ӱ����11���°汾���ȿ�_files/loading.gif" alt="" class="pa loading">
-            <img src="./��Ӱ����11���°汾���ȿ�_files/video-text.png" alt="" class="video-text pa">
+            <img src="./火影忍者11月新版本抢先看_files/loading.gif" alt="" class="pa loading">
+            <img src="./火影忍者11月新版本抢先看_files/video-text.png" alt="" class="video-text pa">
         </div>
         <div class="pop-share" id="pop-share">
-            <div class="foot_spr close" onclick="showDialog.hide()">����ر�</div>
+            <div class="foot_spr close" onclick="showDialog.hide()">点击关闭</div>
             <div class="dialog-con">
-                <img src="./��Ӱ����11���°汾���ȿ�_files/share-ewm.png"><p>ɨ���ά�����һ��</p>
+                <img src="./火影忍者11月新版本抢先看_files/share-ewm.png">
+                <p>扫描二维码分享一下</p>
             </div>
         </div>
     </div>
-    <div id="footer"><div id="footer_wrap"><ul class="service"><li><a id="down_show" href="javascript: void(0);">                <i class="foot_spr icon_foot_down"></i><h4>��Ϸ����</h4><p>��Ϸ���°汾����</p></a></li><li><a id="wx_show" href="javascript:void(0)">                <i class="foot_spr icon_foot_wx"></i><h4>�ٷ�΢��</h4><p>΢��ɨ���ά����ϵ�ٷ��ͷ�</p></a></li><li><a id="service_show" href="javascript:void(0)">                <i class="foot_spr icon_foot_service"></i><h4>�ٷ��ͷ�</h4><p>���ţ��ٱ���ң��ٱ�á��</p></a></li></ul><div class="foot_left"><div class="foot_spr foot_logo"><a title="��Ѷ��������" target="_blank" href="http://ieg.tencent.com/" id="glogo" class="ieg">��Ѷ��������</a><span title="ħ��������" class="mf">ħ��������</span><a title="NBGI" target="_blank" class="nbgi" href="http://www.bandainamcogames.co.jp/">NBGI</a></div><p>��������Ϸ�ʺ�����16�������ϵ��û�ʹ�ã�<br>Ϊ�����Ľ����������������Ϸʱ�䡣</p><p>���Ʋ�����Ϸ���ܾ�������Ϸ��ע�����ұ�����������ƭ�ϵ���</p>        <p>�ʶ���Ϸ���ԣ�������Ϸ��������������ʱ�䣬���ܽ������</p></div><div class="foot_right"><p class="e">&#169;2002 MASASHI KISHIMOTO / 2007 SHIPPUDEN All Rights Reserved.</p><p class="mfr"><a href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/gameNetTag/4028c08b51af781b0151ec794bcf792e" target="_blank"><img src="./��Ӱ����11���°汾���ȿ�_files/copy-icon.png"> �����ν��֡�2016��0035��</a></p><p>&#169;BANDAI NAMCO Entertainment Inc.</p><p class="mfr">������[2017]6138-1456�� �³���֤��������010��</p><p><a target="_blank" href="http://ieg.tencent.com/">��Ѷ��������</a><span>|</span><a target="_blank" href="http://game.qq.com/contract.shtml">��������</a><span>|</span><a target="_blank" href="http://adver.qq.com/">������</a><span>|</span><a target="_blank" href="http://game.qq.com/hr/">��Ѷ��Ƹ</a><span>|</span><a target="_blank" href="http://service.qq.com/">��Ѷ��Ϸ�ͷ�</a><span>|</span><a target="_blank" href="http://game.qq.com/gnav/">��Ϸ��ͼ</a><span>|</span><a target="_blank" href="http://tgact.qq.com/">��Ϸ�</a><span>|</span><a target="_blank" href="http://game.qq.com/portal2010/business.htm">�������</a><span>|</span><a target="_blank" href="http://www.qq.com/">��Ѷ��</a><span>|</span><a target="_blank" href="http://www.qq.com/map/">��վ����</a></p><p class="e">COPYRIGHT &#169;2017 TENCENT. ALL RIGHTS RESERVED.</p><p class="mfr"><a target="_blank" href="http://www.tencent.com/law/mo_law.shtml?/law/copyright.htm">��Ѷ��˾��Ȩ����</a></p></div></div><div class="dialog" id="dialog-down"><div class="foot_spr close" onclick="showDialog.hide()">����ر�</div><div class="dialog-con"><img src="./��Ӱ����11���°汾���ȿ�_files/ewm.jpg"><p>ɨ���ά��������Ϸ</p></div></div><div class="dialog" id="dialog-wx"><div class="foot_spr close" onclick="showDialog.hide()">����ر�</div><div class="dialog-con"><img src="./��Ӱ����11���°汾���ȿ�_files/ewm-wx.jpg"><p>΢��ɨ���ά���ע�ٷ�΢��</p></div></div><div class="dialog" id="dialog-service"><div class="foot_spr close" onclick="showDialog.hide()">����ر�</div><div class="dialog-con"><img src="./��Ӱ����11���°汾���ȿ�_files/service.jpg"><p>΢��ɨ���ά����ϵ�ٷ��ͷ�</p></div></div></div>
+    <div id="footer">
+        <div id="footer_wrap">
+            <ul class="service">
+                <li><a id="down_show" href="javascript: void(0);">                <i class="foot_spr icon_foot_down"></i><h4>游戏下载</h4><p>游戏最新版本下载</p></a></li>
+                <li><a id="wx_show" href="javascript:void(0)">                <i class="foot_spr icon_foot_wx"></i><h4>官方微信</h4><p>微信扫描二维码联系官方客服</p></a></li>
+                <li><a id="service_show" href="javascript:void(0)">                <i class="foot_spr icon_foot_service"></i><h4>官方客服</h4><p>盗号，举报外挂，举报谩骂</p></a></li>
+            </ul>
+            <div class="foot_left">
+                <div class="foot_spr foot_logo"><a title="腾讯互动娱乐" target="_blank" href="http://ieg.tencent.com/" id="glogo" class="ieg">腾讯互动娱乐</a><span title="魔方工作室"
+                        class="mf">魔方工作室</span><a title="NBGI" target="_blank" class="nbgi" href="http://www.bandainamcogames.co.jp/">NBGI</a></div>
+                <p>本网络游戏适合年满16周岁以上的用户使用；<br>为了您的健康，请合理控制游戏时间。</p>
+                <p>抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。</p>
+                <p>适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。</p>
+            </div>
+            <div class="foot_right">
+                <p class="e">&#169;2002 MASASHI KISHIMOTO / 2007 SHIPPUDEN All Rights Reserved.</p>
+                <p class="mfr"><a href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/gameNetTag/4028c08b51af781b0151ec794bcf792e"
+                        target="_blank"><img src="./火影忍者11月新版本抢先看_files/copy-icon.png"> 文网游进字〔2016〕0035号</a></p>
+                <p>&#169;BANDAI NAMCO Entertainment Inc.</p>
+                <p class="mfr">粤网文[2017]6138-1456号 新出网证（粤）字010号</p>
+                <p><a target="_blank" href="http://ieg.tencent.com/">腾讯互动娱乐</a><span>|</span><a target="_blank" href="http://game.qq.com/contract.shtml">服务条款</a><span>|</span>
+                    <a
+                        target="_blank" href="http://adver.qq.com/">广告服务</a><span>|</span><a target="_blank" href="http://game.qq.com/hr/">腾讯招聘</a><span>|</span><a target="_blank"
+                            href="http://service.qq.com/">腾讯游戏客服</a><span>|</span><a target="_blank" href="http://game.qq.com/gnav/">游戏地图</a><span>|</span>
+                        <a
+                            target="_blank" href="http://tgact.qq.com/">游戏活动</a><span>|</span><a target="_blank" href="http://game.qq.com/portal2010/business.htm">商务合作</a><span>|</span>
+                            <a
+                                target="_blank" href="http://www.qq.com/">腾讯网</a><span>|</span><a target="_blank" href="http://www.qq.com/map/">网站导航</a></p>
+                <p class="e">COPYRIGHT &#169;2017 TENCENT. ALL RIGHTS RESERVED.</p>
+                <p class="mfr"><a target="_blank" href="http://www.tencent.com/law/mo_law.shtml?/law/copyright.htm">腾讯公司版权所有</a></p>
+            </div>
+        </div>
+        <div class="dialog" id="dialog-down">
+            <div class="foot_spr close" onclick="showDialog.hide()">点击关闭</div>
+            <div class="dialog-con"><img src="./火影忍者11月新版本抢先看_files/ewm.jpg">
+                <p>扫描二维码下载游戏</p>
+            </div>
+        </div>
+        <div class="dialog" id="dialog-wx">
+            <div class="foot_spr close" onclick="showDialog.hide()">点击关闭</div>
+            <div class="dialog-con"><img src="./火影忍者11月新版本抢先看_files/ewm-wx.jpg">
+                <p>微信扫描二维码关注官方微信</p>
+            </div>
+        </div>
+        <div class="dialog" id="dialog-service">
+            <div class="foot_spr close" onclick="showDialog.hide()">点击关闭</div>
+            <div class="dialog-con"><img src="./火影忍者11月新版本抢先看_files/service.jpg">
+                <p>微信扫描二维码联系官方客服</p>
+            </div>
+        </div>
+    </div>
     <!--tx js-->
-    <script src="./��Ӱ����11���°汾���ȿ�_files/jquery-1.9.1.min.js.����"></script>
-    <script src="./��Ӱ����11���°汾���ȿ�_files/title.js.����"></script><div class="ost_box ost_bg" id="ost_box" style="position: absolute;"><ul class="ost_inner ost_lsn"><li class="ost_logo ost_h40 ost_fl ost_bg"><a href="http://game.qq.com/?ADTAG=IED.InnerCop.gameWeb.topNav%20target=" _blank"="" class="ost_blnk ost_hdn" title="��Ѷ��Ϸlogo">��Ѷ��Ϸlogo</a></li><li id="ost_g" class="ost_ad ost_h40 ost_fl"><img class="ost_nb" id="ost_go" src="./��Ӱ����11���°汾���ȿ�_files/674525405723055084151174997923040.1511749982.18604f6416f0d292a64aaa7836239325.230-40_9669.jpg" alt="" style="display: block;"></li><li class="ost_total ost_ml10 ost_fr"><h3 class="ost_czsh ost_h40"><a target="_blank" href="https://jiazhang.qq.com/jz/home.html?ADTAG=gamepcbanner">�ɳ��ػ�ƽ̨</a></h3><h3 class="ost_title ost_h40" id="ost_t">��Ѷ��Ϸ���а�<i class="ost_icon_arrow ost_bg"></i><sup class="ost_icon_reddot" id="ost_rank_v"></sup></h3><div class="ost_pop" id="ost_p"></div></li><li class="ost_fr ost_log ost_bg" id="ost_log"></li></ul><div id="ost_d" class="ost_big" style="display: none;"><a href="https://ac.o2.qq.com/php/click.php?loc_id=119_0d8e2b9df01ce2966bb5d8dd52e865e1&amp;sub_adtag=&amp;info_data=BHp7gJ8gl2GE7bC1iw9vIgnIIYPW7w4WHFmmfvN2rCXijX3UppCpPCA0pETvqX14PJ-oBOwXg_-LMTztMyyVTWOWVT9AFnjboqYcOgPXcV8E4cdSDscH5QNr5e2_E7eXFwKAfzSx8Y1Vt1Di2x3aiPGc4soKEib6IRuFcrMHPFfbUaho5qMjaRItcetyA5-6BPNBQVgRmM0_F9fdk66Fj8BZMHIxnhwl885wPsaa41N4h6InrFIFx2s6tWk913WFQa0Kf1wMT31v4cAiAmHS-4VNJTkeXPbCu0HztqrEXSB1OLMet4eetSNCBzAI9JrTNFjl0-VSU8XDAcDX8u3_LRGzXSWn6y3uLHRegfjQNyDaeI0eorsiDPAvD-4a96scFsyJ04cXgMvYMnb3QaQ_JErXd1ZeE-su80RKfUSY3a6rXarXzhcE6Z7JZ7zJptdz" target="_blank"><img class="ost_nb" src="./��Ӱ����11���°汾���ȿ�_files/11475235119349163411511749979970185.1511749985.37b2143235c4a81a501a17678678dd6e.970-185_59997.jpg" width="970" height="185" alt=""></a></div></div>
-    <script src="./��Ӱ����11���°汾���ȿ�_files/tvp.player_v2.js.����" charset="utf-8"></script>
-    <script src="./��Ӱ����11���°汾���ȿ�_files/ping_tcss_tgideas_min.js.����"></script>
-    <script src="./��Ӱ����11���°汾���ȿ�_files/showDialog.min.js.����"></script>
-    <script src="./��Ӱ����11���°汾���ȿ�_files/public.js.����"></script>
+    <script src="./火影忍者11月新版本抢先看_files/jquery-1.9.1.min.js.下载"></script>
+    <script src="./火影忍者11月新版本抢先看_files/title.js.下载"></script>
+    <div class="ost_box ost_bg" id="ost_box" style="position: absolute;">
+        <ul class="ost_inner ost_lsn">
+            <li class="ost_logo ost_h40 ost_fl ost_bg">
+                <a href="http://game.qq.com/?ADTAG=IED.InnerCop.gameWeb.topNav%20target=" _blank "=" " class="ost_blnk ost_hdn
+                    " title="腾讯游戏logo ">腾讯游戏logo</a></li><li id="ost_g " class="ost_ad ost_h40 ost_fl "><img class="ost_nb " id="ost_go
+                    " src="./火影忍者11月新版本抢先看_files/674525405723055084151174997923040.1511749982.18604f6416f0d292a64aaa7836239325.230-40_9669.jpg
+                    " alt=" " style="display: block; "></li><li class="ost_total ost_ml10 ost_fr "><h3 class="ost_czsh ost_h40
+                    "><a target="_blank " href="https://jiazhang.qq.com/jz/home.html?ADTAG=gamepcbanner ">成长守护平台</a></h3><h3 class="ost_title
+                    ost_h40 " id="ost_t ">腾讯游戏排行榜<i class="ost_icon_arrow ost_bg "></i><sup class="ost_icon_reddot " id="ost_rank_v
+                    "></sup></h3><div class="ost_pop " id="ost_p "></div></li><li class="ost_fr ost_log ost_bg " id="ost_log "></li></ul><div id="ost_d
+                    " class="ost_big " style="display: none; "><a href="https://ac.o2.qq.com/php/click.php?loc_id=119_0d8e2b9df01ce2966bb5d8dd52e865e1&amp;sub_adtag=&amp;info_data=BHp7gJ8gl2GE7bC1iw9vIgnIIYPW7w4WHFmmfvN2rCXijX3UppCpPCA0pETvqX14PJ-oBOwXg_-LMTztMyyVTWOWVT9AFnjboqYcOgPXcV8E4cdSDscH5QNr5e2_E7eXFwKAfzSx8Y1Vt1Di2x3aiPGc4soKEib6IRuFcrMHPFfbUaho5qMjaRItcetyA5-6BPNBQVgRmM0_F9fdk66Fj8BZMHIxnhwl885wPsaa41N4h6InrFIFx2s6tWk913WFQa0Kf1wMT31v4cAiAmHS-4VNJTkeXPbCu0HztqrEXSB1OLMet4eetSNCBzAI9JrTNFjl0-VSU8XDAcDX8u3_LRGzXSWn6y3uLHRegfjQNyDaeI0eorsiDPAvD-4a96scFsyJ04cXgMvYMnb3QaQ_JErXd1ZeE-su80RKfUSY3a6rXarXzhcE6Z7JZ7zJptdz
+                    " target="_blank "><img class="ost_nb " src="./火影忍者11月新版本抢先看_files/11475235119349163411511749979970185.1511749985.37b2143235c4a81a501a17678678dd6e.970-185_59997.jpg
+                    " width="970 " height="185 " alt=" "></a></div></div>
+    <script src="./火影忍者11月新版本抢先看_files/tvp.player_v2.js.下载 " charset="utf-8 "></script>
+    <script src="./火影忍者11月新版本抢先看_files/ping_tcss_tgideas_min.js.下载 "></script>
+    <script src="./火影忍者11月新版本抢先看_files/showDialog.min.js.下载 "></script>
+    <script src="./火影忍者11月新版本抢先看_files/public.js.下载 "></script>
     <script>
     if (typeof(pgvMain) == 'function') pgvMain();
     </script>
@@ -206,23 +279,23 @@
         _hyrz.showDialog = function(e){
              showDialog.show(e);
         }
-        // ����footer
+        // 插入footer
         Ninja.footer('#footer');
 
-        //���������ť����
+        //点击分享按钮分享
         $('.btn-share').on('click', function(event) {
             event.preventDefault();
-            PTTSendClick('btn','btn-share','����');
+            PTTSendClick('btn','btn-share','分享');
             showDialog.show('pop-share');
         });
 
         $('.btn-back').on('click',  function(event) {
             event.preventDefault();
-            PTTSendClick('btn','btn-back','�ٿ�һ��');
+            PTTSendClick('btn','btn-back','再看一次');
             location.reload()
         });
 
-        //�����չ����ά��
+        //收起或展开二维码
         $('.closeweima').on('click', function(event) {
             event.preventDefault();
             /* Act on the event */
@@ -236,10 +309,10 @@
             $('.openweima').hide()
         });
 
-        //ͼƬԤ����
+        //图片预加载
         var imgPath='//game.gtimg.cn/images/hyrz/cp/a20171101new/';
         function loadImage(url,callback) {     
-            var img = new Image(); //����һ��Image����ʵ��ͼƬ��Ԥ����     
+            var img = new Image(); //创建一个Image对象，实现图片的预下载     
             img.onload = function(){
                 img.onload = null;
             }
@@ -248,18 +321,18 @@
         var preLoadImg=['bg-p0.jpg','p0-tt.png','bg-p1.jpg','scroll-l.png','scroll-r.png','scroll-m.png','scroll-shadow.png','p1-tt.png','p1-img.png','p2-tt.png','p2-img01.png','p2-img02.png','p3-tt.png','p3-img.png','p4-tt.png','p5-tt.png','r1.png','r2.png','r3.png', 'flower01.png','flower02.png','logo.png', 'btn-detail.png','btn-down01.png','btn-down02.png','btn-share.png','btn-play.png','btn-web.png','scroll-l-red.png','scroll-r-red.png','scroll-m-red.png','sub-t01.png','sub-t02.png','sub-t03.png','sub-t04.png','sub-t05.png','sub-t06.png','sub-t07.png','sub-t08.png','sub-t09.png'];
         for(var i=0;i<preLoadImg.length;i++){
           loadImage(preLoadImg[i]);
-        }��
+        }　
 
-        //����鿴����
+        //点击查看详情
         $('.btn-detail').on('click', function(event) {
             event.preventDefault();
-            PTTSendClick('btn','btn-detail','�鿴����');
+            PTTSendClick('btn','btn-detail','查看详情');
             $('.page0').css('display', 'none');
-            //��ʾ��һҳ����
+            //显示第一页内容
             $('.page-wrap').fadeIn(0, function() {
                 $('.common a').addClass('com')
                 $('.flower').animate({bottom: '0%'},800);
-                //���ᶯ��
+                //卷轴动画
                 $('.scroll-box').animate({top:'5%'},700,function(){
                     $('.middle-box').animate({width: '100%'},700,function(){
                         $('.tab li').addClass('animate')
@@ -276,14 +349,14 @@
             });
         });
 
-        //����һ��indexֵ��¼�û���һ�ε����tab��indexֵ
+        //定义一个index值记录用户上一次点击的tab的index值
         var recordIndex=1;
         var num=0;
-        //���tab���������л�
+        //点击tab进行内容切换
         $('.tab li').on('click', function(event) {
             event.preventDefault();
             var index=$(this).index()+1;
-            PTTSendClick('tab','tab'+index,'tab�л�');
+            PTTSendClick('tab','tab'+index,'tab切换');
             num++;
             if(num>0){
                 $('.arrow').removeClass('on');
@@ -310,10 +383,10 @@
         var video=document.getElementById('video1');
         var videoIndex=false;
         var wrapHeight=$(window).width()*1000/1920;
-        //������Ű�ť������Ƶ
+        //点击播放按钮播放视频
         $('.btn-play').on('click',  function(event) {
             event.preventDefault();
-            PTTSendClick('btn','btn-play','������Ƶ');
+            PTTSendClick('btn','btn-play','播放视频');
             $('.video-wrap').css({display: 'block'});
             video.play();
             var videoHeight=$('.mp4').height();
@@ -326,7 +399,7 @@
         });
 
 
-        //��������Ƶ���Ž���ʱ��ʾ���һҳ����
+        //监听当视频播放结束时显示最后一页内容
         video.addEventListener('ended',function(){
             $('#footer').animate({'margin-top': 0},500,function(){
                 $('.video-wrap').fadeOut(500,function(){
@@ -336,7 +409,7 @@
             });
         });
 
-        //��������Ƶ��ʼ����ʱ�������һҳ�������
+        //监听当视频开始播放时更换最后一页相关内容
         video.addEventListener('play',function(){
             var timer=setInterval(function () {
                 var currentTime=video.currentTime
@@ -361,7 +434,7 @@
             $('.loading').show();
 
             var videoTimer = setInterval(function(){
-                var currentTime = video.currentTime; // ��⵱ǰ�Ĳ���ʱ��
+                var currentTime = video.currentTime; // 检测当前的播放时间
 
                 if( currentTime>0 ){
                     $('.loading').hide();
