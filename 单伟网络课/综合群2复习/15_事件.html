@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{
+            background: #ff0000;
+        }
+        li{
+            background: #00ff00;
+        }
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+            margin: 0 auto;
+            position: relative;
+        }
+        #div2{
+            width: 100px;
+            height: 100px;
+            background: #00ff00;
+        }
+        #div3{
+            width: 200px;
+            height: 200px;
+            background: #0000ff;
+        }
+    </style>
+</head>
+<body>
+<input type="text" id="ipt" value="abc">
+
+<ul id="ul1">
+    <li>item 1</li>
+    <li>item 2</li>
+</ul>
+
+<div id="div1">
+    div1
+    <!--<div id="div2">
+        div2
+    </div>-->
+</div>
+
+<p id="p1">哈哈哈田中芳树dfja顶雷AK孙丹菲黄木顺载术有专攻在</p>
+
+<script>
+    /*var oIpt = document.getElementById('ipt');
+    oIpt.onchange = function () {
+        console.log(1111);
+    }*/
+
+    var oUl1 = document.getElementById('ul1');
+    oUl1.onclick = function (e) {
+//        console.log(e.currentTarget);
+        console.log(e.type);
+    }
+
+    var oDiv1 = document.getElementById('div1');
+    oDiv1.onclick = function (e) {
+        e = e || window.event;
+
+//        console.log(e.offsetX + ", " + e.offsetY);
+        console.log(e.layerX + ", " + e.layerY);
+//        console.log(e.clientX + ", " + e.clientY);
+//        alert('div1');
+
+    }
+
+    /*var oDiv2 = document.getElementById('div2');
+    oDiv2.onclick = function (e) {
+        e = e || window.event;
+        alert('div2');
+        e.cancelBubble = true;
+        e.stopPropagation();
+    }*/
+
+    document.oncontextmenu = function (e) {
+        e = e || window.event;
+        console.log('haha');
+        e.returnValue = false;
+        e.preventDefault();
+    }
+
+    var oP1 = document.getElementById('p1');
+    /*oP1.ondblclick = function (e) {
+        console.log('aaaaa');
+        e.preventDefault();
+    }*/
+    oP1.onselectstart = function (e) {
+        //e.preventDefault();
+        return false;
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">load data</button>
+<script>
+    var oBtn = document.getElementById('btn');
+    oBtn.onclick = function () {
+        //1. 创建XMLHttpRequest对象
+        var xmlHttp;
+        if(window.XMLHttpRequest){
+            xmlHttp = new XMLHttpRequest();//标准
+        }else{
+            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");//ie6-
+        }
+
+        //2 发送请求
+        xmlHttp.open('GET', 'data1.json', true);
+        xmlHttp.send();
+
+        //3. 服务器回调
+        xmlHttp.onreadystatechange = function () {
+            if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
+                //xmlHttp.responseXML
+                console.log ( xmlHttp.responseText  );
+            }
+        };
+    };
+</script>
+</body>
+</html>

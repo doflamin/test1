@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function Animal(name, age){
+			this.name = name;
+			this.age = age;
+		}
+		Animal.prototype.eat = function(){
+			console.log('haha');
+		};
+
+		function Cat(){
+			Animal.call(this);//Animal();
+		}
+
+		function inherit(o){
+			function F(){}
+			F.prototype = o;
+			return new F();
+		}
+
+		// Cat.prototype = new Animal()
+		Cat.prototype = inherit(Animal.prototype);
+		// Cat.prototype = Animal.prototype;
+		Cat.prototype.constructor = Cat;
+		Cat.prototype.catchMouse = function(){
+			console.log('catching mouse...');
+		};
+
+
+		/*var cat1 = new Cat();
+		cat1.catchMouse();*/
+		var a1 = new Animal();
+		a1.catchMouse();
+		// console.log(  cat1.constructor  );
+	</script>
+</body>
+</html>

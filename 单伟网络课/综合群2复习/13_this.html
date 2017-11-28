@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="btn">click me</button>
+	<script>
+		/*function test(){
+			console.log(this);//->window
+		}*/
+		/*var obj = {
+			sayHello: function(){
+				console.log(this);//->obj
+			}
+		};
+		obj.sayHello();*/
+		var oBtn = document.getElementById('btn');
+		oBtn.onclick = function(){
+			//console.log(this);//->oBtn
+			//var that = this;
+			var obj = {
+				name: 'lisi',
+				sayHello: function(){
+					console.log(this);
+				}
+			};
+
+			var fn = obj.sayHello = function(){
+				console.log(this);
+			};
+
+			// obj.sayHello();
+			/*var fn = function(){
+				console.log(this);//->;
+			};*/
+			setTimeout(obj.sayHello, 2000);
+		};
+	</script>
+</body>
+</html>
