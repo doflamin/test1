@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//call
+		/*function test(name, age){
+			console.log(name + ', ' + age);	
+		}*/
+		/*var test = function(){};
+		var test = new Function();*/
+		//test();
+		// test.call({name: 'lisi'}, 'wangwu', 23);
+		//test.apply({name: 'lisi'}, ['wangwu', 23]);
+
+		/*var obj = {};
+		obj.call();*///普通对象没有call
+
+		function test(){
+			// console.log(arguments);
+			//test2(arguments);//test2([1,2,3])
+			test2.apply(null, arguments);
+			/*test2.call(null, arguments[0], arguments[1], arguments[2]);*/
+		}
+
+		function test2(a, b, c){
+			console.log(a);
+			console.log(b);
+			console.log(c);
+		}
+
+		test(1,2,3);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

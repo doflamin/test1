@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<ul id="ul1">
+		<li>item 1</li>
+		<li>item 2</li>
+		<li>item 3</li>
+	</ul>
+
+	<button id="btn">click</button>
+
+	<script>
+		//闭包：外部函数内部声明了内部函数，在内部函数中引入了外部函数的局部变量，当外部函数执行完毕以后，这个局部变量不会释放
+
+		/*function outer(){
+			var a = 5;
+			function inner(){
+				return a;
+			}
+			return inner;
+		}
+
+		var fn = outer();
+
+		console.log(   fn()   );*/
+
+		/*(function outer(){
+			var a = 5;
+			function inner(){
+				return a;
+			}
+			console.log(  inner() );
+		})();*/
+
+		var oUl = document.getElementById('ul1');
+		var aLi = oUl.getElementsByTagName('li');
+		for(var i=0; i<aLi.length; i++){
+			
+			(function(idx){
+				aLi[i].onclick = function(){
+					alert(idx);
+				};
+			})(i);
+			
+		}
+
+		//点击按钮，2秒后谈出haha
+
+		var oBtn = document.getElementById('btn');
+		oBtn.onclick = function(){
+			var str = 'haha';
+			setTimeout(function(){
+				alert(str);
+			}, 2000);
+		};
+
+		/*function outer(){
+			var a = 5;
+			return function inner(){
+				return a;
+			};
+		}
+
+		var b = outer();
+
+		setTimeout(function(){
+			console.log(   b()   );
+		}, 2000);*/
+
+
+	</script>
+</body>
+</html>

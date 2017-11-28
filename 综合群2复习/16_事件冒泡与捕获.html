@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+            margin: 0 auto;
+        }
+        #div2{
+            width: 100px;
+            height: 100px;
+            background: #00ff00;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+    div1
+    <div id="div2">
+        div2
+    </div>
+</div>
+<script>
+    var oDiv1 = document.getElementById('div1');
+    /*oDiv1.onclick = function (e) {
+        e = e || window.event;
+        console.log('div1');
+    }*/
+    oDiv1.addEventListener('click', function(){
+        console.log('div1捕获...');
+    }, true);//捕获
+    oDiv1.addEventListener('click', function(){
+        console.log('div1冒泡...');
+    }, false);//冒泡
+
+    var oDiv2 = document.getElementById('div2');
+    /*oDiv2.onclick = function (e) {
+        e = e || window.event;
+        console.log('div2');
+
+    }*/
+    oDiv2.addEventListener('click', function(){
+        console.log('div2捕获...');
+    }, true);
+    oDiv2.addEventListener('click', function(){
+        console.log('div2冒泡...');
+    }, false);
+</script>
+</body>
+</html>
