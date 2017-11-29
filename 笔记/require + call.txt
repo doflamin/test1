@@ -10,6 +10,8 @@
 require主要是解决
 模块加载
 解决文件之间的依赖加载
+
+
 判断是不是一个数组：
 1 arr.constructor == Array
 2 arr instanceof Array
