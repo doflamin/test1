@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    float: left;
+    height: 42px;
+    width: 230px;
+    text-align: center;
+    line-height: 42px;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:hover {
+    color: #ff0000;
+}
+
+.ost_box {
+    height: 42px;
+}
+
+.container {
+    width: 55%;
+    margin: 0 auto;
+}
+
+.container h3 {
+    position: relative;
+    left: 200px;
+    font-size: 13px;
+}
+
+.banner {
+    position: relative;
+    background: url("火影忍者11月新版本抢先看_files/bg-p0.jpg") no-repeat;
+    width: 100%;
+    height: 1000px;
+}
+
+.logo {
+    position: absolute;
+    top: 50px;
+    left: 300px;
+}
+
+.btn-share {
+    position: absolute;
+    top: 50px;
+    right: 100px;
+}
+
+.btn-web {
+    position: absolute;
+    top: 50px;
+    right: 300px;
+}
+
+.p0-tt {
+    position: absolute;
+    top: 290px;
+    left: 40px;
+}
+
+.btn-detail {
+    position: absolute;
+    bottom: 130px;
+    left: 43%;
+}
+
+.logo-text {
+    position: absolute;
+    bottom: 0px;
+    left: 200px;
+}
+
+.btn-down02 {
+    position: absolute;
+    bottom: 530px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.btn-down01 {
+    position: absolute;
+    bottom: 530px;
+    right: 0px;
+    cursor: pointer;
+    display: none;
+}
+.footer{
+    width: 100%;
+    height: 400px;
+    background: url("火影忍者11月新版本抢先看_files/botbg.png");
+    position: relative;
+
+}
+.footer .container{
+    width: 70%;
+    height: 330px;
+    
+    margin: 0 auto;
+}
+.service{
+    width: 750px;
+    height: 190px;
+    margin: 0 auto;
+}
+.footer .service li {
+    float: left;
+    padding-top: 40px;
+    width: 248px;
+    text-align: center;
+    list-style: none;
+}
+.footer .service li i {
+    display: block;
+    width: 44px;
+    height: 44px;
+    margin: 0 auto 6px;
+    cursor: pointer;
+    
+}
+
+.footer .icon_foot_down {
+        background-position: -443px -3px;
+
+ }
+ .foot_spr{
+     background: url("火影忍者11月新版本抢先看_files/foot_logo.png") no-repeat;
+ }
+ .footer .icon_foot_wx {
+    background-position: -489px -3px;
+}
+
+.footer .icon_foot_service {
+    background-position: -535px -3px;
+}
+.footer .service h4 {
+    margin-bottom: 6px;
+    font-size: 18px;
+    color: #e1e1e1;
+    font-weight: 400;
+    cursor: pointer;
+}
+.footer .service p {
+    color: #6a6a6a;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    
+}
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+.footer .service h4:hover{
+    color: #ff0000;
+    
+}
+.footer .foot_left {
+    float: left;
+    width: 405px;
+    line-height: 16px;
+    margin-left: 100px;
+}
+.footer .foot_logo {
+    height: 45px;
+    width: 440px;
+    background-position: 0 0;
+}
+
+.footer .container  {
+    font-size: 15px;
+    color: #6f6f6f;
+}
+.foot_right a{
+    font-size: 15px;
+    color: #6f6f6f;
+}
