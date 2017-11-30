@@ -9,6 +9,8 @@ import Photo from '@/components/photo/Photo'
 import MovieTop250 from '@/components/movie/MovieTop250'
 import Albums from '@/components/music/MusicList'
 import Player from '@/components/music/MusicPlayer'
+import Calculator from '@/components/Calculator'
+
 
 
 
@@ -65,6 +67,11 @@ export default new Router({
     {
       path: '/photo',
       component: Photo
+    }
+    ,{
+      path:'/Calculator',
+      component: Calculator
+      
     }
   ]
 })
