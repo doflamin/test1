@@ -1,6 +1,8 @@
 <template>
 <div class="header" :style="{background:bgColor}">
-      <button :style="{background:bgColor}" > <router-link to="/movie/top250"><span>首页</span></router-link></button>
+      <slot>
+        <button @click='back' :style="{background:bgColor}" >{{nav}}</button>
+      </slot>
       <h2>{{title}}</h2>
 </div>
 
@@ -10,8 +12,18 @@
 
 <script>
    export default {
-   props: ['title','bgColor'],
-
+   props: ['title','bgColor','nav'],
+data () {
+    return {
+      
+    }
+  },
+  methods:{
+    back(){
+      // history.go(-1);
+      this.$router.go(-1);
+    }
+  }
 } 
 
 </script>

@@ -1,6 +1,6 @@
 <template>
-  <div class='list'>
-        <movie-list v-for="(obj,index) in movieList" :key="index" :title="obj.nm" :year="obj.snum"
+  <div class='list' >
+        <movie-list   v-for="(obj,index) in movieList" :key="index" :title="obj.nm" :year="obj.snum"
         :avg = "obj.sc" :img = "obj.img" :desc = "obj.cat"
         ></movie-list>
       </div>

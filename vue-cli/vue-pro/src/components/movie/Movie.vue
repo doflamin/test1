@@ -1,6 +1,6 @@
 <template>
   <div class="movie">
-      <common-header title="movie" bgColor="rgb(33, 150, 243)"></common-header>
+      <common-header  nav="<" title="movie" bgColor="rgb(33, 150, 243)"></common-header>
       <movie-nav></movie-nav>
       <router-view></router-view>
       <div class='loading' v-show="isShow">

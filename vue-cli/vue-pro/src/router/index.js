@@ -10,6 +10,7 @@ import MovieTop250 from '@/components/movie/MovieTop250'
 import Albums from '@/components/music/MusicList'
 import Player from '@/components/music/MusicPlayer'
 import Calculator from '@/components/Calculator'
+import PhotoDetail from '@/components/photo/PhotoDetail'
 
 
 
@@ -72,6 +73,10 @@ export default new Router({
       path:'/Calculator',
       component: Calculator
       
+    },
+    {
+      path     : '/photo/detail/:index',
+      component: PhotoDetail
     }
   ]
 })
