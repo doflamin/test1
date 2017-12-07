@@ -22,6 +22,7 @@ export default {
       SwipeItem
   }
 }
+
 </script>
 <style>
 @import "../../assets/css/vue-swipe.css";
