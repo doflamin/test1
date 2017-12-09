@@ -24,7 +24,7 @@ javascript跨域有两种情况：
 3、端口的不同，如：http://www.a.com:8080和http://www.a.com:8088
 4、协议不同，如：http://www.a.com和https://www.a.com
 
-对于情况3和4，需要通过后台proxy来解决，具体方式如下：
+1. 对于情况3和4，需要通过后台proxy来解决，具体方式如下：
 a、在发起方的域下创建proxy程序
 b、发起方的js调用本域下的proxy程序
 c、proxy将请求发送给接收方并获取相应数据
