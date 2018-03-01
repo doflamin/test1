@@ -11,17 +11,28 @@ import Albums from '@/components/music/MusicList'
 import Player from '@/components/music/MusicPlayer'
 import Calculator from '@/components/Calculator'
 import PhotoDetail from '@/components/photo/PhotoDetail'
-
+import Login from '@/components/welcome/Login'
+import Index from '@/components/welcome/Index'
 
 
 
 Vue.use(Router)
 
 export default new Router({
-  routes: [{
+  routes: [
+    {
+      path     : '/login',
+      component: Login
+    },
+    {
+      path     : '/index',
+      component: Index
+    },
+    {
       path: '/',
       redirect: '/movie/top250'
     },
+
     {
       path: '/movie',
       component: Movie,
