@@ -156,8 +156,6 @@ nth-child（2n）:第几个孩子（整个表达式从1开始数,但是n从0开�
 
 js中font-size不这么写，要写成fontSize
 
-
-
 hasclass返回的是true或者false
 width:内容的宽度
 innerwidth():内容和padding的宽度
