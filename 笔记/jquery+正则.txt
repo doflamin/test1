@@ -164,7 +164,6 @@ outerwidth()：内容和padding和boder的宽度 括号里写上true的话就会
 不写就是读取
 offset相对于文档距离
 position相对于离他最近的已经定位的祖先元素
-
 appendTo 把子元素追加到父元素上
 
 
