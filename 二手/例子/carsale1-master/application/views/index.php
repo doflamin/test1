@@ -2,6 +2,7 @@
 <html>
 <head lang="en">
 	<base href="<?php echo site_url();?>">
+
     <meta charset="UTF-8">
     <title>二手车交易</title>
     
